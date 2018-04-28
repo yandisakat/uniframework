@@ -6,7 +6,7 @@ name := "uniframework"
 lazy val root = (project in file("."))
   .enablePlugins(PlayScala, DebianPlugin, JavaAppPackaging, SystemdPlugin)
 
-scalaVersion := "2.12.5"
+scalaVersion := "2.12.6"
 
 scalacOptions += "-Ypartial-unification"
 
