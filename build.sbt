@@ -15,7 +15,7 @@ val PlayFrameWorkVersion = "2.6.13"
 val catsVersion = "1.1.0"
 
 maintainer := "Kessel Okinga and Boniface Kabaso"
-packageSummary in Linux := "University Framework REST API"
+packageSummary in Linux := "University Framework REST API Project "
 packageDescription := "IT Department  "
 
 dockerCommands := Seq(
