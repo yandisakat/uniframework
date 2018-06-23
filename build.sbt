@@ -10,7 +10,7 @@ scalaVersion := "2.12.6"
 
 scalacOptions += "-Ypartial-unification"
 
-val PhantomVersion =  "2.24.2"
+val PhantomVersion =  "2.24.4"
 val PlayFrameWorkVersion = "2.6.13"
 val catsVersion = "1.1.0"
 
