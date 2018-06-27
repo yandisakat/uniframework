@@ -1,5 +1,3 @@
-package uniframeWork
-
 class Department()
 {
 
