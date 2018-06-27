@@ -1,5 +1,3 @@
-package uniframeWork
-
 /**
   * Created by Dorcas
   * Exam class version 1.1
@@ -12,40 +10,17 @@ class Exam(val subject_name:String, val venue_no:String, val exam_time:String, v
   var examDate: String = exam_date
   var examController: String = exam_controller
 
-  def getSubjectName(): String = {
-       return this.subName;
-     }
 
-  def getVenueNo() : String = {
-    return this.venueNo
-  }
-
-  def getExamTime() : String = {
-    return this.examTime
-  }
-
-  def getExamDate() : String = {
-    return this.examDate
-  }
-
-  def getExamController() : String = {
-    return this.examController
-  }
-
-  def ExamDetails() =
-  {
-    println("Subject : " +getSubjectName() )
-    println("Venue no: " +getVenueNo())
-    println("Date: " +getExamDate())
-    println("Time: " +getExamTime())
-    println("Controller: " +getExamController())
-  }
 }
 object Exam extends App
 {
 
   var exam = new Exam("ADP",venue_no = "1.35", exam_time = "2 PM",exam_date = "17 June",exam_controller = "RothMan")
 
-  exam.ExamDetails()
+  println("Subject : " +exam.subject_name )
+  println("Venue no: " +exam.venue_no )
+  println("Date: " +exam.exam_time)
+  println("Time: " +exam.exam_date)
+  println("Controller: " +exam.exam_controller )
 
 }
