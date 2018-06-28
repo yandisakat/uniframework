@@ -75,8 +75,6 @@ libraryDependencies += "org.jsoup" % "jsoup" % "1.11.3"
 libraryDependencies += "com.softwaremill.sttp" %% "core" % "1.2.1"
 
 
-
-
 libraryDependencies += "com.typesafe.play" % "play-iteratees_2.12" % "2.6.1"
 libraryDependencies += "com.typesafe.play" % "play-iteratees-reactive-streams_2.12" % "2.6.1"
 
