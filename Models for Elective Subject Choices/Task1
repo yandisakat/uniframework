@@ -1,0 +1,8 @@
+4 classes for 8 people, 2 collaborate on 1 class.
+
+Lecturer(subclass of staff)
+Stream (associative class between subject and course)
+Elective (subclass of subject) and
+Elective controller
+
+
