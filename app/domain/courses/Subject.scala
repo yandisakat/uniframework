@@ -1,4 +1,4 @@
 package domain.courses
 
 
-case class Subject(var id: String, var name:String, var credits: Double)
+case class Subject( id: String, name:String, credits: Double)
