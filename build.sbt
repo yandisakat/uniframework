@@ -10,8 +10,8 @@ scalaVersion := "2.12.6"
 
 scalacOptions += "-Ypartial-unification"
 
-val PhantomVersion =  "2.24.2"
-val PlayFrameWorkVersion = "2.6.13"
+val PhantomVersion =  "2.24.6"
+val PlayFrameWorkVersion = "2.6.15"
 val catsVersion = "1.1.0"
 
 maintainer := "Kessel Okinga and Boniface Kabaso"
@@ -47,16 +47,19 @@ libraryDependencies += filters
 libraryDependencies += "org.scalatestplus.play" % "scalatestplus-play_2.12" % "3.1.2" % "test"
 libraryDependencies += "org.scalactic" % "scalactic_2.12" % "3.0.5"
 
-libraryDependencies += "javax.mail" % "javax.mail-api" % "1.5.6"
+libraryDependencies += "javax.mail" % "javax.mail-api" % "1.6.1"
 libraryDependencies += "org.typelevel" % "cats-core_2.12" % catsVersion
+libraryDependencies += "org.typelevel" %% "cats-effect" % "0.10.1"
+
 
 
 
 libraryDependencies += "com.github.romix.akka" % "akka-kryo-serialization_2.12" % "0.5.2"
 libraryDependencies += "com.esotericsoftware" % "kryo" % "4.0.1"
-libraryDependencies += "com.github.t3hnar" % "scala-bcrypt_2.12" % "3.0"
-libraryDependencies += "com.squareup.okhttp3" % "okhttp" % "3.9.0"
-libraryDependencies += "com.squareup.moshi" % "moshi" % "1.5.0"
+libraryDependencies += "com.github.t3hnar" % "scala-bcrypt_2.12" % "3.1"
+libraryDependencies += "com.squareup.okhttp3" % "okhttp" % "3.10.0"
+libraryDependencies += "com.squareup.moshi" % "moshi" % "1.6.0"
+libraryDependencies += "com.squareup.moshi" % "moshi-adapters" % "1.6.0"
 
 
 
@@ -65,16 +68,11 @@ libraryDependencies += "org.apache.commons" % "commons-email" % "1.5"
 libraryDependencies += "commons-io" % "commons-io" % "2.6"
 
 libraryDependencies += "com.roundeights" % "hasher_2.12" % "1.2.0"
-libraryDependencies += "com.sendgrid" % "sendgrid-java" % "4.1.2"
+libraryDependencies += "com.sendgrid" % "sendgrid-java" % "4.2.1"
 libraryDependencies += "org.bitbucket.b_c" % "jose4j" % "0.6.3"
-libraryDependencies += "com.rometools" % "rome" % "1.9.0"
+libraryDependencies += "com.rometools" % "rome" % "1.10.0"
 libraryDependencies += "org.jsoup" % "jsoup" % "1.11.3"
-libraryDependencies += "com.softwaremill.sttp" %% "core" % "1.1.13"
-libraryDependencies += "com.squareup.moshi" % "moshi" % "1.5.0"
-libraryDependencies += "com.squareup.moshi" % "moshi-adapters" % "1.5.0"
-
-
-
+libraryDependencies += "com.softwaremill.sttp" %% "core" % "1.2.1"
 
 
 libraryDependencies += "com.typesafe.play" % "play-iteratees_2.12" % "2.6.1"

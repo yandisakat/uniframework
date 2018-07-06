@@ -1,5 +1,5 @@
 package domain.people
 
-case class Person() {
+class Staff {
 
 }
