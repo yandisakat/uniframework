@@ -20,3 +20,4 @@ object communication {
 
   def identity: Communication = Communication("", "", "", LocalDateTime.now())
 }
+
