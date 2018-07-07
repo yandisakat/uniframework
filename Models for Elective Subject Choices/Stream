@@ -1,0 +1,25 @@
+/*
+ * Contributors : Katiya & Dorcas
+ * Class Stream
+*/
+
+
+class Stream ()
+{
+  var stream_code = ""
+  var stream_description = ""
+  var stream_name = ""
+  var isAtCapacity = false
+  var quota = 0
+  var numRegistered = 0
+
+}
+
+object Stream extends App{
+  var stream = new Stream ()
+
+  println("Stream Details  " +stream.stream_code+"\n" +stream.stream_description+"\n"
+    +stream.stream_name+"\n"+stream.isAtCapacity+"\n"+stream.quota+"\n"
+    +stream.numRegistered+"\n")
+
+}

@@ -1,33 +1,23 @@
 package communication
 import java.util._
+import java.time.LocalDateTime
+import play.api.libs.json.Json
 
 /*
 Full Name: Kessel Okinga Koumou
 Student Number: 216012759
 */
 
+case class Communication (comID: String,
+                 comTitle: String,
+                 desc: String,
+                 date: LocalDateTime)
+                 //time: LocalDateTime;
 
- class communication(){
 
-protected var comID =""
+object communication {
+  implicit val comS = Json.format[Communication]
 
-
-  def comTitle(comTitle: String) : Unit =
-  {
-    val comTitle = comTitle
-  }
-  def description(description: String) : Unit =
-  {
-    val description = description
-  }
-  def date(date: String) : Unit =
-  {
-    val date = date
-  }
-  def time(time: String) : Unit =
-  {
-    val time = time
-  }
-
+  def identity: Communication = Communication("", "", "", LocalDateTime.now())
 }
 
