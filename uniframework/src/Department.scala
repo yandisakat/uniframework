@@ -1,19 +1,15 @@
-class Department()
+/*
+ * @param dpId department ID
+ * @param dpName department name
+ */
+
+case class Department(dpId: String, dpName: String)
+
+object Department extends  App
 {
+  implicit val department = Department(dpId= "", dpName = "")
 
-  var department_id = ""
-  var department_name = "Information and Communication Technology"
-  var department_building = ""
 
+  println("Department details :" +department.dpId+ "" + department.dpName)
 
 }
-
-object Department extends App()
-{
-  var department = new Department()
-
-
-  println("Department name : "+department.department_name)
-
-}
-
