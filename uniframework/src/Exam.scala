@@ -1,19 +1,13 @@
-package uniframeWork
+/*
+ * @param subject name
+ * @param venue no the number of the venue
+ * @param exam time
+ * @param exam controller
+ * @param exam date
+ *
+ */
+case class Exam(subject_name:String, venue_no:String, exam_time:String, exam_controller:String, exam_date:String)
 
-/**
-  * Created by Dorcas
-  * Exam class version 1.1
-  */
-class Exam(val subject_name:String, val venue_no:String, val exam_time:String, val exam_controller:String, val exam_date:String)
-{
-  var subName: String = subject_name
-  var venueNo: String = venue_no
-  var examTime: String = exam_time
-  var examDate: String = exam_date
-  var examController: String = exam_controller
-
-
-}
 object Exam extends App
 {
 
