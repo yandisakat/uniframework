@@ -1,7 +1,7 @@
 package communication
 import java.util._
 import java.time.LocalDateTime
-import java. play.api.libs.json.Json
+
 
 /*
 Full Name: Kessel Okinga Koumou
@@ -17,7 +17,7 @@ case class Communication (comID: String,
 
 
 object communication {
-  implicit val comS : Json.format[Communication]
+  implicit val communicationFormat = Json.format[Communication]
 
   def identity: Communication = Communication("", "", "", LocalDateTime.now())
 }
