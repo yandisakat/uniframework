@@ -1,50 +1,31 @@
 
 
-class Assignment (val sDate: String, val dDate: String, val desc: String, val assmtTotMk: Int) {
+//*
+ * @param sDate starting date
+ * @param dDate due date
+ * @param desc description
+ * @param totalMk assignment total marks
+ */
+
+case class Assignment (var sDate: String = "",
+                       var dDate: String = "",
+                       var desc: String = "",
+                       var totalMk: Int = 0) {
   
-  var startDate: String = sDate;
-  var dueDate: String = dDate;
-  var description: String = desc;
-  var assmtTotalMark: Int = assmtTotMk;
+  def setStartDate(value: String):Unit = sDate = value
   
-  def setStartDate(sDate: String){
-    
-    startDate = sDate;
-  }
+  def setDueDate(value: String): Unit = dDate = value
   
-  def setDueDate(dDate: String){
-    
-    dueDate = dDate;
-  }
+  def setDescription(value: String):Unit = desc = value
   
-  def setDescription(desc: String)
-  {
-    description = desc;
-  }
+  def setAssmtTotalMark(value: Int):Unit = totalMk = value 
   
-  def setAssmtTotalMark(assmtTotMk: Int)
-  {
-    assmtTotalMark = assmtTotMk;
-  }
+  def getStartDate() = sDate
   
-  def getStartDate: String =
-  {
-    return startDate;
-  }
+  def getDueDate() = dDate
   
-  def getDueDate: String =
-  {
-    return dueDate;
-  }
+  def getDescription() = desc
   
-  def getDescription: String =
-  {
-    return description;
-  }
-  
-  def getAssmtTotalMark: Int =
-  {
-    return assmtTotalMark;
-  }
+  def getTotalMark = totalMk
   
 } //end class
