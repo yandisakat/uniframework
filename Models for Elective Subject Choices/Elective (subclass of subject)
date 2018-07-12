@@ -15,6 +15,5 @@ object subject {
 implicit val subj = Json.format[Subject]
 
 def identity: Subject = Subject ("","","")
-
 }
 
