@@ -15,6 +15,7 @@ case class Communication (comID: String,
                  //time: LocalDateTime;
 
 
+
 object communication {
   implicit val comS = Json.format[Communication]
 
