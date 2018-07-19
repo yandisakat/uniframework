@@ -1,0 +1,9 @@
+package domain.courses
+
+import play.api.libs.json.Json
+
+case class Faculty(id:Integer, room: String, description:String)
+
+object Faculty{
+  implicit val facultyJson = Json.format[Faculty]
+}
