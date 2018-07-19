@@ -1,0 +1,45 @@
+package repositories.courses.tables
+
+import java.time.LocalDateTime
+
+import com.outworkers.phantom.dsl._
+import com.outworkers.phantom.jdk8._
+import com.outworkers.phantom.streams._
+import domain.courses.Course
+
+import scala.concurrent.Future
+
+abstract class CourseTable extends Table[CourseTable]
+{
+  object courseId extends IntColumn with PrimaryKey with ClusteringOrder with Ascending
+  object courseName extends StringColumn with PartitionKey
+  object courseDuration extends IntColumn
+}
+
+abstract class CourseTableImpl extends CourseTable with RootConnector
+{
+  override lazy val tableName = "Courses"
+  
+  def save(course: Course): Future[ResultSet] = 
+  {
+    insert
+      .value(_.courseId, course.venueId)
+      .value(_.courseName, course.courseName)
+      .value(_.courseDuration, course.courseDuration)
+      .future()
+  }
+  
+  def getCourses(courseId:Integer):Future[Seq[Course]] =
+  {
+    select
+      .where(_.courseId eqs courseId)
+      .fetchEnumerator() run Iteratee.collect()
+  }
+  
+  def deleteCourses(courseId:Integer):Future[ResultSet]=
+  {
+    delete
+      .where(_.courseId eqs courseId)
+      .future()
+  }
+}
