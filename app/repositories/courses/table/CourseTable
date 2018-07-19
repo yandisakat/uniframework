@@ -13,7 +13,7 @@ abstract class CourseTable extends Table[CourseTable]
 {
   object courseId extends IntColumn with PrimaryKey with ClusteringOrder with Ascending
   object courseName extends StringColumn with PartitionKey
-  object courseDuration extends IntColumn
+  object courseDescr extends StringColumn
 }
 
 abstract class CourseTableImpl extends CourseTable with RootConnector
@@ -25,7 +25,7 @@ abstract class CourseTableImpl extends CourseTable with RootConnector
     insert
       .value(_.courseId, course.venueId)
       .value(_.courseName, course.courseName)
-      .value(_.courseDuration, course.courseDuration)
+      .value(_.courseDescr, course.courseDescr)
       .future()
   }
   
