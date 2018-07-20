@@ -1,48 +1,44 @@
-
-
 /**
-  * Created by 216074630 on 6/20/2018.
-  */
+* Created by 216074630 on 6/20/2018.
+* @param student number
+* @param department id
+* @param name
+* @param surname 
+* @param initials
+* @param email
+*/
 
-class student(val stu_Num:Int,val fn:String,val ln:String,val dept_ID:Int,val email:String,val stu_Initial:String){
+ case class student(var stud_Num:Int = 0,
+		    var fn:String = "",
+		    var ln:String = "",
+		    var dept_ID:Int = 0,
+		    var email:String = "",
+ 		    var stud_Initial:String =""){
+ 
+        def setstud_Num(value: Int):Unit = stud_Num = value
+        def setfn(value: String): Unit = fn = value
+        def setln(value: String): Unit = ln = value
+        def setdept_ID(value: Int):Unit = dept_ID = value
+        def setemail(value: String): Unit = email = value
+        def setstu_Initial(value: String): Unit = stud_Initial = value
+  
+        def getstud_Num = stud_Num;
+        def getfn = fn;
+        def getln = ln;
+        def getdept_ID = dept_ID;
+        def getemail = email;
+        def getintial = stud_Initial;
+    
 
-  var student_num:Int=stu_Num
-  var department:Int=dept_ID
-  var name:String =fn
-  var surname :String = ln
-  var student_Initial :String = stu_Initial
-  var student_email:String = email
-  def getStudeNum(): Int = {
-    return this.student_num;
-  }
+  
+def show()={
 
-  def getDepartment(): Int = {
-    return this.department;
-  }
-
-  def getName(): String = {
-    return this.name;
-  }
-
-  def getSurname(): String = {
-    return this.surname;
-  }
-
-  def getStudentInitials(): String = {
-    return this.student_Initial;
-  }
-
-  def getEmail(): String = {
-    return this.student_email;
-  }
-  def show()={
-
-    println("StudentNumber:"+ stu_Num)
-    println("Department:"+ department)
-    println("Name: "+name)
-    println("Surname: "+surname)
-    println("Initial:"+ stu_Initial)
-    println("Email:"+student_email)
+    println("StudentNumber:"+ getstud_Num)
+    println("Department:"+ getdept_ID)
+    println("Name: "+ getfn)
+    println("Surname: "+getln)
+    println("Initial:"+ getintial)
+    println("Email:"+ getemail)
 
 
   }
