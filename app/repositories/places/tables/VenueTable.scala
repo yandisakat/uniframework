@@ -1,13 +1,15 @@
 package repositories.places.tables
 
 import java.time.LocalDateTime
-
 import com.outworkers.phantom.dsl._
 import com.outworkers.phantom.jdk8._
 import com.outworkers.phantom.streams._
 import domain.places.Venue
-
 import scala.concurrent.Future
+
+/**
+  * By Yandisa Katiya - 2018/07/21
+  */
 
 abstract class VenueTable extends Table[VenueTable]
 {
