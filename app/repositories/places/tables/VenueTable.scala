@@ -40,7 +40,7 @@ abstract class VenueTableImpl extends VenueTable with RootConnector
   }
   
   
-  def deleteVenues(venueId:String, entityIdL:String):Future[ResultSet]=
+  def deleteVenues(venueId:String, entityId:String):Future[ResultSet]=
   {
     delete
       .where(_.venueId eqs venueId)
