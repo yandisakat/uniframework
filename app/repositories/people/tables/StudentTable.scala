@@ -7,7 +7,18 @@ import com.outworkers.phantom.streams._
 import domain.people.Student
 import scala.concurrent.Future
 
-abstract class StudentTable extends Table[StudentTable] with RootConnector
+abstract class StudentTable extends Table[StudentTable]
+{ 
+  object studentId extends StringColumn with PrimaryKey with ClusteringOrder with Ascending
+  object deptId extends StringColumn with PartitionKey
+  object firstName extends StringColumn
+  object lastName extends StringColumn
+  object initial extends StringColumn
+  object yearOfStudy extends IntColumn
+  object email extends StringColumn
+}
+
+abstract class StudentTableImpl extends StudentTable with RootConnector
 {
   override lazy val tableName = "Students"
   
@@ -32,7 +43,7 @@ abstract class StudentTable extends Table[StudentTable] with RootConnector
       .fetchEnumerator() run Iteratee.collect()   
   }
   
-  def deleteStudent(studentId: String, deptId: String):Future[ResultSet]=
+  def deleteStudents(studentId: String, deptId: String):Future[ResultSet]=
   {
     delete
       .where(_.studentId eqs studentId)
