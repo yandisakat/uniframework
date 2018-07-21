@@ -7,6 +7,10 @@ import com.outworkers.phantom.streams._
 import domain.people.Student
 import scala.concurrent.Future
 
+/**
+  * By Yandisa Katiya - 2018/07/21
+  */
+
 abstract class StudentTable extends Table[StudentTable]
 { 
   object studentId extends StringColumn with PrimaryKey with ClusteringOrder with Ascending
