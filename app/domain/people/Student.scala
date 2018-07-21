@@ -5,8 +5,8 @@ import play.api.libs.json.Json
   */
 
 
-case class Student(val studentId: String, val deptId: String, val firstName:String, val lastName: String, val initial: String, val email: String) {
-
+case class Student(studentId: String, deptId: String, firstName:String, lastName: String, initial: String, email: String) 
+{
   object Student
   {
     implicit val studentJson = Json.format[Lecturer]
