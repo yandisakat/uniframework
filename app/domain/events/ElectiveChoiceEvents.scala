@@ -1,30 +1,34 @@
-package domain.event
 
 import java.time.LocalDateTime
 
- class ElectiveChoiceEvents(val studentID: Int, val subjectID: String, val eventData: LocalDateTime) {
-  var student_ID: Int = studentID
-  var subject_ID: String = subjectID
-  var event_Data: LocalDateTime
+ class ElectiveChoiceEvents(val student_ID: Int,
+                            val subject_ID: String,
+                            val event_Data: LocalDateTime)
+ {
+
+   var studentID: Int = student_ID
+   var subjectID: String = subject_ID
+   var eventData: LocalDateTime = event_Data
 
   def getStudent_ID(): Int = {
-    return this.student_ID
+    return this.studentID;
   }
 
   def getSubject_ID(): String = {
-    return this.subjectID
+    return this.subjectID;
   }
 
   def getEvent_Data(): LocalDateTime = {
 
-    return this.event_Data
+    return this.eventData;
   }
 
-  def choice(): Unit = {
+  def choice()={
 
-    println(s"Student ID: ${student_ID}");
-    println(s"Subject ID: ${subject_ID}");
-    println(s"Event Data and Time: ${event_Data}");
+    println("Student ID: " + studentID)
+    println("Subject ID: " + subjectID)
+    println("Event Data and Time: " + eventData)
+
 
   }
 
