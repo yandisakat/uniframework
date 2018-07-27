@@ -11,7 +11,7 @@ scalaVersion := "2.12.6"
 scalacOptions += "-Ypartial-unification"
 
 val PhantomVersion =  "2.24.6"
-val PlayFrameWorkVersion = "2.6.15"
+val PlayFrameWorkVersion = "2.6.16"
 val catsVersion = "1.1.0"
 
 maintainer := "Kessel Okinga and Boniface Kabaso"
