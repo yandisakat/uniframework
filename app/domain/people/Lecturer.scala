@@ -1,14 +1,13 @@
 package domain.people
 
 
-
-/*
-*
-* @created by Reece
+/**
+ *
+ * @created by Reece
 
 --Ducumentation
 
-*/
+ */
 
 import play.api.libs.json.Json
 
