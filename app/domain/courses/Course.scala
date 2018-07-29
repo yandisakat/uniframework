@@ -2,7 +2,7 @@ package domain.courses
 
 /**
 *
-* @created by .....
+*created by .....
 
 ---Documentation
 *
