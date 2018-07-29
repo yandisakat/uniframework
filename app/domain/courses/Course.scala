@@ -1,13 +1,12 @@
 package domain.courses
 
 /**
-
+*
 * @created by .....
 
 ---Documentation
-
-
-
+*
+*
 */
 
 
