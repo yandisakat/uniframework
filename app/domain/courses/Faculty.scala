@@ -1,7 +1,7 @@
 package domain.courses
 
 
-/*
+/**
  * @created by Reece 
  * @param faculty ID
  * @param faculty name
