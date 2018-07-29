@@ -1,7 +1,9 @@
 package domain.people
 import play.api.libs.json.Json
 /**
-  * By Yandisa Katiya - 2018/07/21
+  * @created by Yandisa Katiya - 2018/07/21
+  
+  --Documentation
   */
 
 

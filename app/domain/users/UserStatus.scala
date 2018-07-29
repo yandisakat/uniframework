@@ -1,5 +1,14 @@
 package domain.users
 
+
+
+/**
+ * @Created by boniface
+
+--Documentation
+ *
+ */
+
 import java.time.LocalDateTime
 
 import play.api.libs.json.Json
