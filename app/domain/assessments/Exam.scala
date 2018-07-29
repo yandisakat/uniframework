@@ -1,6 +1,6 @@
 import play.api.libs.json.Json
 /**
- * @created by Dorcas 
+ * created by Dorcas 
  * @param subject ID
  * @param subject name
  * @param venue no the number of the venue
