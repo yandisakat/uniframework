@@ -3,7 +3,7 @@ package domain.courses;
 import play.api.libs.json.Json;
 
 /** 
- * @created by Reece Waldeck
+ * created by Reece Waldeck
  * @param id primary key to identify Faculty
  * @param name
  * @param Campus the campus the faculty belongs to
