@@ -4,7 +4,7 @@ package domain.people
 
 /*
 *
-* @ Created by Reece
+* @created by Reece
 
 --Ducumentation
 
