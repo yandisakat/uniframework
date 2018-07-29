@@ -3,10 +3,13 @@ import java.util._
 import java.time.LocalDateTime
 
 
-/*
-Full Name: Kessel Okinga Koumou
-Student Number: 216012759
-*/
+/**
+  * created by Kessel
+  * @param comID
+  * @param comTitle
+  * @param desc
+  * @param date
+  */
 
 case class Communication (comID: String,
                  comTitle: String,
