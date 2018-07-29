@@ -3,11 +3,10 @@ package domain.people
 
 
 /*
-
+*
 * @ Created by Reece
 
 --Ducumentation
-
 
 */
 
