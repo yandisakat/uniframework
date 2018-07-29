@@ -1,22 +1,22 @@
-package domain.courses
+package domain.courses;
 
+import play.api.libs.json.Json;
 
-/**
- * @created by Reece 
- * @param faculty ID
- * @param faculty name
- * @param faculty desscription
- *
- */
+/** 
+ * @created by Reece Waldeck
+ * @param id primary key to identify Faculty
+ * @param name
+ * @param Campus the campus the faculty belongs to
+*/
 
-
-import play.api.libs.json.Json
-
-case class Faculty(id:Int, name:String, room: String, description:String)
-
-object Faculty{
-
-  implicit val facultyJson = Json.format[Faculty]
-  def identity:Faculty = Faculty("","","","")
-  
+case class Faculty(
+    id: Integer, 
+    name: String,
+    campus: Campus
+    ) 
+    
+object Faculty
+{
+  implicit val facFmt = Json.format[Faculty];
+  def identity: Faculty = Faculty(0, "", null);
 }
