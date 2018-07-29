@@ -1,7 +1,5 @@
 package domain.places
 
-
-
 /*
  * @created by Katiya 
  * @param Venue ID
