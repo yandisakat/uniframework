@@ -3,7 +3,7 @@ package domain.people;
 import play.api.libs.json.Json;
 
 /** 
- * @created by Reece Waldeck
+ * created by Reece Waldeck
  * @param lect_id primary key to identify Lecturer
  * @param nme
  * @param srnme
