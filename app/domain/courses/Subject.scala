@@ -7,8 +7,6 @@ package domain.courses
   * @param credits
   */
 
-
-
 case class Subject(SubjectId: String, name:String, credits: Double)
 
 object Subject {
