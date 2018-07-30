@@ -11,4 +11,5 @@ case class PersonTypes(personId: String, deptId: String, firstName:String, lastN
   object PersonTypes
   {
     implicit val PersonTypesJson = Json.format[PersonTypes]
+  }
 }
