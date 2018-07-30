@@ -1,6 +1,7 @@
 package domain.places
 
 /*
+ * created ny Yandisa
  * @param Venue ID
  * @param Venue name
  * @param Entity ID
@@ -16,4 +17,5 @@ case class Venue(venueId:String, venueName: String, entityId:String, capacity: I
 object Venue
 {
   implicit val venueJson = Json.format[Venue]
+  def definity: Venue = Venue ("", "", "", 0)
 }
