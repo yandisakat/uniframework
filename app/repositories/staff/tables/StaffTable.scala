@@ -43,7 +43,7 @@ abstract class StaffTableImpl extends StaffTable with RootConnector
       .future()
   }
   
-  def getStaff(staff_ID:String):Future[Seq[Staff]] =
+  def getStaff(staff_ID:Int):Future[Seq[Staff]] =
   {
     select
       .where(_.staff_ID eqs staff_ID)
