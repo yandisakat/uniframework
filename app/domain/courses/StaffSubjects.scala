@@ -1,6 +1,9 @@
 package domain.courses
 import play.api.libs.json.Json
 /*
+ * @param id - staffSubjectsID
+ * @param subjects - staffSubjects List
+ *
  * By Yandisa Katiya - 2018/07/30
  */
 
