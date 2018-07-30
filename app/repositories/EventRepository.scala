@@ -1,4 +1,4 @@
-package repositories.places
+package repositories.event
 
 import com.outworkers.phantom.dsl._
 import conf.connections.DataConnection
