@@ -14,7 +14,6 @@ import scala.concurrent.Future
 abstract class StaffTable extends Table[StaffTable]
 {
   object staff_ID extends IntColumn with PrimaryKey with ClusteringOrder with Ascending
-  object entity_Id extends StringColumn with PartitionKey
   object staff_Name extends StringColumn
   object staff_Surname extends StringColumn
   object staff_Email extends StringColumn
@@ -44,20 +43,18 @@ abstract clasStaffTableImpl extends StaffTable with RootConnector
       .future()
   }
   
-  def getStaff(venueId:String, entityId:String):Future[Seq[Venue]] =
+  def getStaff(venueId:String):Future[Seq[Venue]] =
   {
     select
       .where(_.staff_ID eqs staff_ID)
-      .and(entityId eqs entityId)
       .fetchEnumerator() run Iteratee.collect()
   }
   
   
-  def deleteStaff(staff_ID:Int, entityId:String):Future[ResultSet]=
+  def deleteStaff(staff_ID:Int):Future[ResultSet]=
   {
     delete
       .where(_.staff_ID eqs staff_ID)
-      .and (_.entityId eqs entityId)
       .future()
   }
 }
