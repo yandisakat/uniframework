@@ -24,7 +24,7 @@ abstract class StaffTable extends Table[StaffTable]
   object staff_Address extends StringColumn
 }
 
-abstract clasStaffTableImpl extends StaffTable with RootConnector
+abstract class StaffTableImpl extends StaffTable with RootConnector
 {
   override lazy val tableName = "Staff"
   
@@ -43,7 +43,7 @@ abstract clasStaffTableImpl extends StaffTable with RootConnector
       .future()
   }
   
-  def getStaff(venueId:String):Future[Seq[Venue]] =
+  def getStaff(staff_ID:String):Future[Seq[Staff]] =
   {
     select
       .where(_.staff_ID eqs staff_ID)
