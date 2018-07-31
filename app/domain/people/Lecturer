@@ -1,9 +1,0 @@
-package domain.people
-
-import play.api.libs.json.Json
-
-case class Lecturer(val nme: String, val srnme: String, val telNo: String, val emailAddr: String, val classes: List[Subject_Class])
-
-object Lecturer{
-  implicit val lecturerJson = Json.format[Lecturer]
-}
