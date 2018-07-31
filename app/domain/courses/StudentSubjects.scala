@@ -1,10 +1,10 @@
-package domain.users
+package domain.courses
 
 import java.time.LocalDateTime
 import play.api.libs.json.Json
 
 /**
- * 
+ * created by Wailed
  * @param orgId
  * @param email
  * @param firstName
