@@ -6,7 +6,7 @@ import play.api.libs.json.Json
 
 /**
 *
-* Created by 216074630 on 7/30/2018.
+* Created by Thomas
 * Thomas Miller
 * @param student number
 * @param subject code
