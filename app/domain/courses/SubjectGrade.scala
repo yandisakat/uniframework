@@ -5,6 +5,7 @@ import play.api.libs.json.Json
 
 
 /**
+*
 * Created by 216074630 on 7/30/2018.
 * Thomas Miller
 * @param student number
@@ -27,6 +28,6 @@ import play.api.libs.json.Json
 object SubjectGrade{
   
   implicit val gradeFmt = Json.format[Grades]
-  def identity: SubjectGrade = SubjectGrade("",None,None,"","",LocalDateTime.now())
+  def identity: SubjectGrade = SubjectGrade(0,"","",0.0,0.0,LocalDateTime.now())
 
 }
