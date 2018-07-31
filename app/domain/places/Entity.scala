@@ -1,5 +1,17 @@
 package domain.places
 
+
+/**
+  * created by Natasha
+  * @param entityid
+  * @param entityName
+  * @param universiId
+  * @param facultyId
+  * @param departmentId
+  *
+  */
+
+
 //represents University, Faculty and Department
 import play.api.libs.json.Json
 
