@@ -1,64 +1,31 @@
-class event(val event_ID:Int,val event_Name:String, val event_Location:String, 
-val event_Organisation:String, val event_Date:Date, val event_Time:Date, 
-val event_ContactPersonName:String,val event_ContactPersonNumber:String)
-{
+package domain.event
 
-  var eventID: Int = event_ID //Event ID
-  var eventName: String = event_Name //Name of the event
-  var eventLocation: String = event_Location //Where event is held
-  var eventOrganisation: String = event_Organisation //Organisation responsible for the event
-  var eventDate: Date = event_Date //Date of the event
-  var eventTime: Date = event_Time //The time the event is starting
-  var eventContactPersonName: String = event_ContactPersonName //Person's name responsible for the event
-  var eventContactPersonNumber: String = event_ContactPersonNumber //Person's number responsible for the event
+import java.time.LocalDateTime
 
-  def getEventID(): Int = {
-    return this.eventID;
-  }
+import play.api.libs.json.Json
 
-  def getEventName(): String = {
-    return this.eventName;
-  }
-
-  def getEventLocation(): String = {
-    return this.eventLocation;
-  }
-
-  def getEventDate(): Date = {
-    return this.eventDate;
-  }
-
-  def getEventTime(): Date = {
-    return this.eventTime;
-  }
-
-  def getEventContactPersonName(): String = {
-    return this.eventContactPersonName;
-  }
-
-  def getEventContactPersonNumber(): String = {
-    return this.eventContactPersonNumber;
-  }
-
-  def show() = {
-    println("Event ID: " + eventID)
-    println("Event Name: " + eventName)
-    println("Event Location: " + eventLocation)
-    println("Event Organisation: " + eventOrganisation)
-    println("Event Date: " + eventDate)
-    println("Event Time: " + eventTime)
-    println("Event Contact Person Name: " + eventContactPersonName)
-    println("Event Contact Person Number: " + eventContactPersonNumber)
-
-
-  }
-
-
-}
-
-object course extends App{
+/**
+  *@parm event_ID - Event ID
+  *@parm event_Name - Name of the event
+  *@parm event_Location - Where event is held
+  *@parm event_Organisation - rganisation responsible for the event
+  *@parm event_Date - Date of the event
+  *@parm event_Time - The time the event is starting
+  *@parm event_ContactPersonName - Person's name responsible for the event
+  *@parm event_ContactPersonNumber - Person's number responsible for the event
+  */
   
-  var e = new event(123 , "Open day", "Bellville Campus", "CPUT", "12/05/2018", "09:00", "Jessica", "0724526677");
-  e.show();
+case class Event(event_ID:Int,
+                event_Name:String, 
+                event_Location:String, 
+                event_Organisation:String, 
+                event_Date:LocalDateTime, 
+                event_Time:LocalDateTime, 
+                event_ContactPersonName:String,
+                event_ContactPersonNumber:String)
 
+object Event{
+  implicit val eventFmt = Json.format[Event]
+  def newEvent: Event = Event(123 , "Open day", "Bellville Campus", "CPUT", "12/05/2018", 
+"09:00", "Jessica", "0724526677");
 }
