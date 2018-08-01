@@ -1,3 +1,4 @@
+
 package domain.courses
 
 import java.time.LocalDateTime
@@ -31,3 +32,4 @@ object SubjectGrade{
   def identity: SubjectGrade = SubjectGrade(0,"","",0.0,0.0,LocalDateTime.now())
 
 }
+
