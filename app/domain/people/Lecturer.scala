@@ -13,7 +13,7 @@ import play.api.libs.json.Json;
  */
 
 case class Lecturer(
-    lect_id: Integer, 
+    lect_id: Int, 
     nme: String, 
     srnme: String, 
     telNo: String, 
