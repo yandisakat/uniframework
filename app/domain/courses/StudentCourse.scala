@@ -20,5 +20,5 @@ class SubjectCourse(
 object SubjectCourse
 {  
   implicit val SubjectCourseFmt = Json.format[SubjectCourse]
-  def identity: SubjectCourse = SubjectCourse("",null,null,"")
+  def identity: SubjectCourse = SubjectCourse("","","","")
 }
