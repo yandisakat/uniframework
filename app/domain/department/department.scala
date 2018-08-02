@@ -13,12 +13,11 @@ import play.api.libs.json.Json
  * @param dpName department name
  */
 
-case class Department(dpId: String, dpName: String)
+case class Department(dpId: Integer, dpName: String)
 
-object Department extends  App
+object Department
 {
   implicit val department = Json.format[Department]
 
-  def identity: Department = Department("", "")
-
+  def identity: Department = Department(0, "")
 }
