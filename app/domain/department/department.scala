@@ -1,23 +1,17 @@
-
-
-/**
-*created by dorcas  
-
---Documentation
-
-*/
+package domain.department;
 
 import play.api.libs.json.Json
-/*
- * @param dpId department ID
- * @param dpName department name
+
+/* 
+ * @created by dorcas
+ * @param depId department ID
+ * @param depName department name
  */
 
-case class Department(dpId: Integer, dpName: String)
+case class Department(depId: String, depName: String)
 
 object Department
 {
   implicit val department = Json.format[Department]
-
-  def identity: Department = Department(0, "")
+  def identity: Department = Department("", "")
 }
