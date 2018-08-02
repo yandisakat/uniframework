@@ -1,12 +1,10 @@
 package domain.courses
 
 /**
-*
-*created by .....
-
----Documentation
-*
-*
+* @param id
+* @param name
+* @param description
+* @param subjects
 */
 
 
