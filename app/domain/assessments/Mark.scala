@@ -14,7 +14,7 @@ case class Mark(subjectName: String,
                 mark: Int,
                 percentage: Double)
 
-object Mark extends App
+object Mark
 {
   
   implicit val Mark = Json.format[Mark]
