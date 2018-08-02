@@ -24,5 +24,5 @@ case class Lecturer(
 object Lecturer
 {
   implicit val lectFmt = Json.format[Lecturer];
-  def identity: Lecturer = Lecturer("0", "", "", "", "", null);
+  def identity: Lecturer = Lecturer("", "", "", "", "", null);
 }
