@@ -15,7 +15,7 @@ import play.api.libs.json.Json
 
 case class Department(dpId: String, dpName: String)
 
-object Department extends  App
+object Department
 {
   implicit val department = Json.format[Department]
 
