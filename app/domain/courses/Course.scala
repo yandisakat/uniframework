@@ -4,10 +4,10 @@ import play.api.libs.json.Json
 
 /**
 * Part 2 - Reviewed by Yandisa Katiya
-* @param courseId
+* @param courseId - Shorthand identification of course/ course code
 * @param name
 * @param description
-* @param subjects
+* @param subjects - Subjects belonging to the course, type List
 */
 
 
