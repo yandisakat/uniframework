@@ -1,24 +1,31 @@
+package domain.department
 
+import java.time.LocalDateTime
+import play.api.libs.json.Json
 
 /**
-*created by dorcas  
+  * created by Reece
+  * part1: reviewed by Kessel
+  * part2:
+  *
+  * @param dpId
+  * @param dpName
+  * @param managerID
+  * @param managerStartDate
+  * @param managerEndDate
+  *
+  *
+  *  managerStartDate: when the contract start
+  *  managerEndDate: when the constract end
+  */
 
---Documentation
+case class Department(dpId: String, dpName: String, managerID: String, managerStartDate: LocalDateTime, managerEndDate: LocalDateTime)
 
-*/
-
-import play.api.libs.json.Json
-/*
- * @param dpId department ID
- * @param dpName department name
- */
-
-case class Department(dpId: String, dpName: String)
-
-object Department extends  App
+object Department
 {
-  implicit val department = Json.format[Department]
+  implicit val DepartmentFormat = Json.format[Department]
 
-  def identity: Department = Department("", "")
+
+  def identity: Department = Department("", "","",LocalDateTime.now(), LocalDateTime.now())
 
 }
