@@ -16,7 +16,7 @@ object Subject {
   def identify:Subject = Subject ("","","",0.0)
 
   implicit val s = Json.format[Subject]
-  def identify:Subject = Subject ("","",0.0)
+  def identify:Subject = Subject ("","","",0.0)
 
 
 }
