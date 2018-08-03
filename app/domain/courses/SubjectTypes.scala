@@ -8,6 +8,7 @@ import play.api.libs.json.Json
   * @param name
   * @param description
   * @param subjects
+  This class is for describing the type of subject eg major or minor
   */
 
 case class SubjectTypes(id:String, name:String, description:String,subjects:List[String])
