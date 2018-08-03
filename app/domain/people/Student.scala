@@ -23,9 +23,9 @@ import java.time.LocalDate
 
 
 case class Student(studentId: String, deptId: String, firstName:String, lastName: String, initial: String, dateofbirth: LocalDate, address: String, telephoneNo: Int, Level: String, StudentType: String)
+
   object Student
   {
     implicit val studentJson = Json.format[Student]
     def identity: Student = Student("","","","","",LocalDate.of(),"",0,"","")
-  
 }

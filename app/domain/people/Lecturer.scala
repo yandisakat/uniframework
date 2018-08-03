@@ -9,20 +9,24 @@ import play.api.libs.json.Json;
  * @param srnme
  * @param telNo
  * @param emalAddr
+ * @param Address 
  * @param subjects the list of subjects the Lecturer lectures
  */
 
 case class Lecturer(
-    lect_id: String, 
+    lectid: String, 
     nme: String, 
     srnme: String, 
     telNo: String, 
     emailAddr: String,
+    Addr: String,
     subjects: List[Subject]
 )
 
 object Lecturer
 {
   implicit val lectFmt = Json.format[Lecturer];
+
   def identity: Lecturer = Lecturer("", "", "", "", "", null);
+
 }
