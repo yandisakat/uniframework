@@ -9,13 +9,14 @@ package domain.people
 * @param surname 
 * @param initials
 * @param email
+* @param position
 */
 
- case class Staff(staff_Num:Int, firstname: String, lastname:String, dept_ID:Int , emp_ID:Int, email:String, stud_Initial:String)
+ case class Staff(staff_Num:Int, firstname: String, lastname:String, dept_ID:Int , emp_ID:Int, email:String, stud_Initial:String,position:String)
 
 
 object Staff{
  implict val StaffFormat = Json.format[Staff]
-def definity: Staff = Staff (0,"","",0,0,"","")
+def definity: Staff = Staff (0,"","",0,0,"","","")
 	
 }

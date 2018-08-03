@@ -14,7 +14,7 @@ import play.api.libs.json.Json;
  */
 
 case class Lecturer(
-    lect_id: Integer, 
+    lectid: String, 
     nme: String, 
     srnme: String, 
     telNo: String, 
@@ -26,5 +26,7 @@ case class Lecturer(
 object Lecturer
 {
   implicit val lectFmt = Json.format[Lecturer];
-  def identity: Lecturer = Lecturer(0, "", "", "", "","", null);
+
+  def identity: Lecturer = Lecturer("", "", "", "", "", null);
+
 }
