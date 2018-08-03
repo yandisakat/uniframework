@@ -3,6 +3,7 @@ package domain.courses
 import play.api.libs.json.Json
 
 /**
+* Part 2 - Reviewed by Yandisa Katiya
 * @param courseId
 * @param name
 * @param description
@@ -13,7 +14,8 @@ import play.api.libs.json.Json
 case class Course(id:String, name:String, description:String,credits:Double,subjects:List[String])
 
 
-object Course{
+object Course
+{
   implicit  val courseForm = Json.format[Course]
-  def identity:Course = Course("","","",0.0, Nil)
+  def identity:Course = Course("","","", 0.0, NULL)
 }
