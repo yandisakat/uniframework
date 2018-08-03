@@ -22,7 +22,7 @@ import play.api.libs.json.Json
 
 case class Department(dpId: String, dpName: String, managerID: String, managerStartDate: LocalDateTime, managerEndDate: LocalDateTime)
 
-object Department extends  App
+object Department
 {
   implicit val departmentFormat = Json.format[Department]
 
