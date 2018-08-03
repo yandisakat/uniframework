@@ -1,6 +1,7 @@
 package domain.people
 import play.api.libs.json.Json
-/*
+
+/** Yandisa
  * @param Student ID
  * @param Department ID
  * @param First Name
@@ -9,7 +10,6 @@ import play.api.libs.json.Json
  * @param Email Address
  * @param Phone 
  *
- *By Yandisa Katiya - 2018/07/21
  *
  */
 
@@ -17,7 +17,9 @@ case class Student(studentId: String, deptId: String, firstName:String, lastName
 {
   object Student
   {
-    implicit val studentJson = Json.format[Lecturer]
-    def identity: Student = Student("","","","","","","")
+
+    implicit val studentJson = Json.format[Student]
+    def identity: Student = Student("","","","","","")
+
   }
 }
