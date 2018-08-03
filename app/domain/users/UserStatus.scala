@@ -1,17 +1,14 @@
 package domain.users
 
-
+import java.time.LocalDateTime
+import play.api.libs.json.Json
 
 /**
  * @Created by boniface
-
---Documentation
- *
+ * @param userId
+ * @param date
+ * @param status
  */
-
-import java.time.LocalDateTime
-
-import play.api.libs.json.Json
 
 case class UserStatus(userId: String,
                       date: LocalDateTime,
