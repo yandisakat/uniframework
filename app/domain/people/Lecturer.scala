@@ -9,7 +9,7 @@ import play.api.libs.json.Json;
  * @param nme
  * @param srnme
  * @param telNo
- * @param emalAddr
+ * @param emailAddr
  * @param Address 
  * @param subjects the list of subjects the Lecturer lectures
  */
