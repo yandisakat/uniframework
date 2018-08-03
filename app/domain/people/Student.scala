@@ -16,7 +16,7 @@ case class Student(studentId: String, deptId: String, firstName:String, lastName
 {
   object Student
   {
-    implicit val studentJson = Json.format[Lecturer]
+    implicit val studentJson = Json.format[Student]
     def identity: Student = Student("","","","","","")
   }
 }
