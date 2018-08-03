@@ -1,20 +1,17 @@
 package domain.courses
 
-/**
-*
-*created by .....
+import play.api.libs.json.Json
 
----Documentation
-*
-*
+/**
+* @param courseId
+* @param name
+* @param description
+* @param subjects
 */
 
 
-
-import play.api.libs.json.Json
-
-
 case class Course(id:String, name:String, description:String,credits:Double,subjects:List[String])
+
 
 object Course{
   implicit  val courseForm = Json.format[Course]

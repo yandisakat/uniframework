@@ -14,6 +14,7 @@ import play.api.libs.json.Json
 * @param Exam name
 * @param Marks
 * @param average
+* @param category
 * @param date marks was taken
 */
 
@@ -22,6 +23,7 @@ import play.api.libs.json.Json
     stud_Num:Int,
 	  subject_code:Option[String],
 		exam_name:Option[String],
+	  	category:List[String];
 		marks:Double,
 		total:Double,
 		date:LocalDateTime) 
@@ -29,7 +31,7 @@ import play.api.libs.json.Json
 object SubjectGrade{
   
   implicit val gradeFmt = Json.format[Grades]
-  def identity: SubjectGrade = SubjectGrade(0,"","",0.0,0.0,LocalDateTime.now())
+  def identity: SubjectGrade = SubjectGrade(0,"","",Nil,0.0,0.0,LocalDateTime.now())
 
 }
 
