@@ -9,7 +9,7 @@ import play.api.libs.json.Json
  * @param exam date
  *
  */
-case class Exam(subject_ID:String, subject_name:String, venue_no:String, exam_time:String, exam_controller:String, exam_date:String)
+case class Exam(subjectID:String, subjectName:String, venueNo:String, examTime:String, examController:String, examDate:String)
 
 object Exam extends App
 {
