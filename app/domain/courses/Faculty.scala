@@ -4,19 +4,19 @@ import play.api.libs.json.Json;
 
 /** 
  * created by Reece Waldeck
- * @param id primary key to identify Faculty
- * @param name
- * @param Campus the campus the faculty belongs to
+ * @param facId  primary key to identify Faculty
+ * @param facName
+ * @param Campus  the campus the faculty belongs to
 */
 
 case class Faculty(
-    id: Integer, 
-    name: String,
+    facId: String, 
+    facName: String,
     campus: Campus
     ) 
     
 object Faculty
 {
   implicit val facFmt = Json.format[Faculty];
-  def identity: Faculty = Faculty(0, "", null);
+  def identity: Faculty = Faculty("", "", null);
 }
