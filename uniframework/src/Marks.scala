@@ -16,7 +16,7 @@ case class Marks (var subjectId: String = "",
   
   def setStudentId(value: String):Unit = studentId = value
   
-  def setMark(value: Int):Unit = mark = value
+  def setMark(value: Double):Unit = mark = value
   
   def setPercentage(totMk: Int):Unit = percentage = mark / totMk * 100
   
