@@ -9,8 +9,11 @@ import repositories.places.tables.VenueTableImpl
 
 class VenueDatabase(override val connector: KeySpaceDef) extends Database[VenueDatabase](connector)
 {
-  object VenueDatabase extends VenueDatabase(DataConnection.connector)
-  
+  object venueTable extends VenueTableImpl with connector.Connector
+}
+
+object VenueDatabase extends VenueDatabase(DataConnection.connector)
+
   trait VenueRepository
   {
     def database = VenueDatabase
