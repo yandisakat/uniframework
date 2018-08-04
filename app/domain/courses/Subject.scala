@@ -1,22 +1,17 @@
 package domain.courses
+import play.api.libs.json.Json
 
 /**
   *created by Kessel
-  * @param SubjectId
-  * @param name
-  * @param credits
-  * @param description
+  * @param subjId
+  * @param subjName
+  * @param subjDescr
+  * @param subjCredits
   */
 
-case class Subject(SubjectId: String,description: String, name:String, credits: Double)
+case class Subject(subjId: String, subjName:String, subjDescr: String, subjCredits: Double)
 
 object Subject {
-
-  implicit val s = Json.format[Subejct]
+  implicit val subject = Json.format[Subject]
   def identify:Subject = Subject ("","","",0.0)
-
-  implicit val s = Json.format[Subject]
-  def identify:Subject = Subject ("","","",0.0)
-
-
 }
