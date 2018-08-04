@@ -4,10 +4,10 @@ import play.api.libs.json.Json
 /*
  * @created by Yandisa Katiya
  *
- * @param Venue ID
- * @param Venue name
- * @param Entity ID
- * @param Capacity
+ * @param venueId
+ * @param venueName
+ * @param entityId
+ * @param capacity
  */
 
 case class Venue(venueId:String, venueName: String, entityId:String, capacity: Int)
