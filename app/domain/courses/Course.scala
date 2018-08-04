@@ -4,18 +4,17 @@ import play.api.libs.json.Json
 
 /**
 * Reviewed by Yandisa Katiya
-* @param courseId - Shorthand identification of course/ course code
+* @param courseId  shorthand identification of course/ course code
 * @param name
 * @param description
-* @param subjects - Subjects belonging to the course, type List
+* @param credits
+* @param subjects  list of subjects belonging to the course
 */
 
-
-case class Course(id:String, name:String, description:String,credits:Double,subjects:List[String])
-
+case class Course(courseId:String, name:String, description:String,credits:Double,subjects:List[String])
 
 object Course
 {
-  implicit  val courseForm = Json.format[Course]
-  def identity:Course = Course("","","", 0.0, NULL)
+  implicit val courseForm = Json.format[Course]
+  def identity:Course = Course("","","", 0.0, null)
 }
