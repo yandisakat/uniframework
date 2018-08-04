@@ -1,6 +1,7 @@
 package domain.courses;
 
 import play.api.libs.json.Json;
+import domain.places.Campus;
 
 /** 
  * created by Reece Waldeck
