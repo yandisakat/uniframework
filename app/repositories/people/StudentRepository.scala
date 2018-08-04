@@ -2,7 +2,7 @@ package repositories.people
 
 import com.outworkers.phantom.dsl._
 import conf.connections.DataConnection
-import repositories.users.tables._
+import repositories.people.tables._
 
 /**
   * By Yandisa Katiya - 2018/07/21
