@@ -10,7 +10,7 @@ import repositories.users.tables._
 
 class StudentDatabase(override val connector: KeySpaceDef) extends Database[StudentDatabase](connector) 
 {
-  object StudentTable extends StudentTableImpl with connector.Connector
+  object studentTable extends StudentTableImpl with connector.Connector
 }
 
 object StudentDatabase extends StudentDatabase(DataConnection.connector)
