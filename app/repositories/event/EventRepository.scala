@@ -2,7 +2,7 @@ package repositories.event
 
 import com.outworkers.phantom.dsl._
 import conf.connections.DataConnection
-import repositories.event.tables.EventTableImpl
+import repositories.event.tables.EventTable
 
 class EventDatabase(override val connector: KeySpaceDef) extends Database[EventDatabase](connector){
   object eventTable extends EventTableImpl with connector.Connector
