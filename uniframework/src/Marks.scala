@@ -1,18 +1,22 @@
 
 
 /*
- * @param name
- * @param mark
+ * @param subjectId
+ * @param studentId
+ * @param mark student mark obtained
  * @param percentage
  */
 
-case class Marks (var name: String = "",
-                  var mark: Int = 0,
+case class Marks (var subjectId: String = "",
+                  var studentId: String = "",
+                  var mark: Double = 0,
                   var percentage: Double = 0) {
  
-  def setName(value: String):Unit = name = value
+  def setSubjectId(value: String):Unit = subjectId = value
   
-  def setMark(value: Int):Unit = mark = value 
+  def setStudentId(value: String):Unit = studentId = value
+  
+  def setMark(value: Int):Unit = mark = value
   
   def setPercentage(totMk: Int):Unit = percentage = mark / totMk * 100
   
@@ -20,6 +24,8 @@ case class Marks (var name: String = "",
   
   def getPercentage() = percentage
   
-  def getName() = name
+  def getSubjectId() = subjectId
+  
+  def getStudentId() = studentId
   
 } //end class
