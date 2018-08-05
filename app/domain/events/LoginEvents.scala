@@ -8,12 +8,12 @@ import play.api.libs.json.Json
   * created by Kessel
   * @param username
   * @param password
-  * @param login_Date
+  * @param loginDate
   
   */
 
 
-case class LoginEvents(username: String, password: String, login_Date:LocalDateTime)
+case class LoginEvents(username: String, password: String, loginDate:LocalDateTime)
 
 object LoginEvents {
 

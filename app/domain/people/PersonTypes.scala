@@ -3,6 +3,12 @@ package domain.people
 import play.api.libs.json.Json
 /**
   *@created Natasha
+  *@Person Id
+  *@Department Id
+  *@first name
+  *@last name
+  *@initisls 
+  *@email
   */
 
 

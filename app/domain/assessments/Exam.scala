@@ -1,21 +1,30 @@
+package domain.assessments
+
+import java.time.LocalDateTime
+
 import play.api.libs.json.Json
+
 /**
- * created by Dorcas 
- * @param subject ID
- * @param subject name
- * @param venue no the number of the venue
- * @param exam time
- * @param exam controller
- * @param exam date
+ * created by Dorcas
+ *
+ * @param subjectId
+ * @param subjectName
+ * @param venueNo the number of the venue
+ * @param examTime the time the exam starts
+ * @param examController
+ * @param examDate
  *
  */
-case class Exam(subject_ID:String, subject_name:String, venue_no:String, exam_time:String, exam_controller:String, exam_date:String)
 
-object Exam extends App
-{
+case class Exam(subjectId:String,
+                subjectName:String,
+                venueNo:String,
+                examTime:String,
+                examController:String,
+                examDate: LocalDateTime)
 
-  implicit val exam = Json.format[Exam]
-
-  def identity: Exam = Exam("", "", "","","","")
+object Exam{
+  implicit val examFmt = Json.format[Exam]
+  def identity: Exam = Exam("", "", "", "", "", LocalDateTime.now())
 
 }
