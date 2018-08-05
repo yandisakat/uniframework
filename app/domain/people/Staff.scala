@@ -2,21 +2,21 @@ package domain.people
 
 /**
 * Created by Thomas
-* @param staff number
-* @param department id
-* @param employment id
-* @param name
-* @param surname 
-* @param initials
+* @param staffId
+* @param firstName
+* @param lastName
+* @param deptId
+* @param empId 
 * @param email
+* @param studInitial
 * @param position
 */
 
- case class Staff(staff_Num:Int, firstname: String, lastname:String, dept_ID:Int , emp_ID:Int, email:String, stud_Initial:String,position:String)
+ case class Staff(staffId:String, firstname: String, lastname:String, deptId:String , empId:String, email:String, studInitial:String,position:String)
 
 
 object Staff{
  implict val StaffFormat = Json.format[Staff]
-def definity: Staff = Staff (0,"","",0,0,"","","")
+def definity: Staff = Staff ("","","","","","","","")
 	
 }

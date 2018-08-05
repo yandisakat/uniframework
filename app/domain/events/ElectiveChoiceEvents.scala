@@ -1,5 +1,4 @@
 package domain.events
-
 import java.time.LocalDateTime
 
 /**
@@ -9,10 +8,10 @@ import java.time.LocalDateTime
   * @param eventDate
   */
 
-case class ElectiveChoiceEvents( studID:Int, subjID:String, eventDate:LocalDateTime)
+case class ElectiveChoiceEvents( studId:String, subjId:String, eventDate:LocalDateTime)
 
 object ElectiveChoiceEvents 
 {
   implicit val ElectiveC = Json.format[ElectiveChoiceEvents];
-  def identify: ElectiveChoiceEvents = ElectiveChoiceEvents (0,"",LocalDateTime.now());
+  def identify: ElectiveChoiceEvents = ElectiveChoiceEvents ("","",LocalDateTime.now());
 }

@@ -17,12 +17,12 @@ import java.time.LocalDate
   * @param Level
   * @param StudentType
   *
-  * StudentType describe Full time and Part time student
+  * StudentType describe Full time and Part time student and students department 
   */
 
 
 
-case class Student(studentId: String, deptId: String, firstName:String, lastName: String, initial: String, dateofbirth: LocalDate, address: String, telephoneNo: Int, Level: String, StudentType: String)
+case class Student(studentId: String, deptId: String, firstName:String, lastName: String, initials: String, dateOfBirth: LocalDate, address: String, telephoneNo: Int, level: String, StudentType: String)
 
   object Student
   {
