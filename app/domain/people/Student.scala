@@ -11,7 +11,7 @@ import java.time.LocalDate
   * @param firstName
   * @param lastName
   * @param initial
-  * @param dateofbirth
+  * @param dateOfbirth
   * @param address
   * @param telephoneNo
   * @param Level
