@@ -9,7 +9,7 @@ import play.api.libs.json.Json
   *@last name
   *@initisls 
   *@email
-  */
+*/
 
 
 case class PersonTypes(personId: String, deptId: String, firstName:String, lastName: String, initial: String, email: String) 
