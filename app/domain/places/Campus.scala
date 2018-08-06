@@ -9,7 +9,7 @@ import domain.courses.Faculty
   * @param campName
   * @param campAddr
   * @param faculties  List of faculties a campus hosts
-  */ 
+*/ 
 
 case class Campus(campId: String, campName: String, campAddr: String, faculties: List[Faculty])
 

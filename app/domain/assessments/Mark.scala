@@ -22,6 +22,6 @@ object Mark
   
   implicit val Mark = Json.format[Mark]
   
-  def identity: Mark = Mark("", "", 0, 0)
+  def identity: Mark = Mark("", "", 0.0, 0.0)
   
 }

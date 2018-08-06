@@ -9,20 +9,20 @@ import play.api.libs.json.Json
 *
 * Created by Thomas
 * Thomas Miller
-* @param student number
-* @param subject code
-* @param Exam name
-* @param Marks
-* @param average
+* @param studentNumber
+* @param subjectCode
+* @param examName
 * @param category
-* @param date marks was taken
+* @param marks
+* @param total
+* @param date - date on which marks was taken
 */
 
   
   class SubjectGrade(
-    stud_Num:Int,
-	  subject_code:Option[String],
-		exam_name:Option[String],
+    		studentNumber:Int,
+	 	subjectCode:Option[String],
+		examName:Option[String],
 	  	category:List[String];
 		marks:Double,
 		total:Double,

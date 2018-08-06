@@ -9,8 +9,8 @@ import play.api.libs.json.Json
  *
  * @param subjectId
  * @param subjectName
- * @param venueNo the number of the venue
- * @param examTime the time the exam starts
+ * @param venueNo   -  the Venue Number
+ * @param examTime  -  Exam starting time 
  * @param examController
  * @param examDate
  *
