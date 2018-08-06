@@ -12,7 +12,7 @@ package domain.people
 * @param position
 */
 
- case class Staff(staffId:String, firstname: String, lastname:String, deptId:String , empId:String, email:String, studInitial:String,position:String)
+ case class Staff(staffId:String, firstName: String, lastName:String, deptId:String , empId:String, email:String, studInitial:String,position:String)
 
 
 object Staff{
