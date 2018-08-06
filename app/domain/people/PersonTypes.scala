@@ -3,16 +3,16 @@ package domain.people
 import play.api.libs.json.Json
 /**
   *@created Natasha
-  *@Person Id
-  *@Department Id
-  *@first name
-  *@last name
-  *@initisls 
+  *@personId
+  *@departmentId
+  *@firstName
+  *@lastName
+  *@initials 
   *@email
 */
 
 
-case class PersonTypes(personId: String, deptId: String, firstName:String, lastName: String, initial: String, email: String) 
+case class PersonTypes(personId: String, deptId: String, firstName:String, lastName: String, initials: String, email: String) 
 {
   object PersonTypes
   {
