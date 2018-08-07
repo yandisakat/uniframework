@@ -9,6 +9,13 @@ import domain.places.Venue
 
 import scala.concurrent.Future
 
+/*
+ * @created by Natasha
+ * @param venueId
+ * @param venueName
+ * @param capacity
+ * @param description
+ */
 
 abstract class VenueTable extends Table[VenueTable, Venue] {
 
