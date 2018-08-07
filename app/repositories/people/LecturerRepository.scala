@@ -8,7 +8,7 @@ import repositories.lecturer.tables.LecturerTablelmpl
 class LecturerDatabase(override val connector: KeySpaceDef)extends Database [lecturerDatabase](connect) {
 
 
-  object peopleTable extends LecturerTableLmpl with connector.Connector
+  object lecturerTable extends LecturerTableLmpl with connector.Connector
 
 }
 
