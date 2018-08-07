@@ -14,6 +14,7 @@ import play.api.libs.json.Jso
   * @param addr
   * @param managerStartDate
   * @param managerEndDate
+  *
   */
 
 case class Manager(managerID: String, firstname: String, lastname: String,dateofbirth: LocalDate, telNo: Int, emailAddr: String, addr: String, managerStartDate: LocalDateTime, managerEndDate: LocalDateTime)
