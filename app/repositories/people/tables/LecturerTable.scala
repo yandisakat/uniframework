@@ -22,7 +22,7 @@ abstract class LecturerTable extends Table[LecturerTable, Lecturer] {
   object telephoneNo extends StringColumn
   object email extends StringColumn
   object address extends StringColumn
-
+  //missing subject list 
 
 
 }
