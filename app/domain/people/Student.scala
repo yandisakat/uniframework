@@ -22,7 +22,16 @@ import java.time.LocalDate
 
 
 
-case class Student(studentId: String, deptId: String, firstName:String, lastName: String, initials: String, dateOfBirth: LocalDate, address: String, telephoneNo: Int, level: String, StudentType: String)
+case class Student(studentId: String,
+                   deptId: String,
+                   firstName:String,
+                   lastName: String,
+                   initials: String,
+                   dateOfBirth: LocalDate,
+                   address: String,
+                   telephoneNo: Int,
+                   level: String,
+                   StudentType: String)
 
   object Student
   {
