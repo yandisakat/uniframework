@@ -20,7 +20,7 @@ import play.api.libs.json.Json
 
   
   class SubjectGrade(
-    		studentNumber:Int,
+    		studentNumber:String,
 	 	subjectCode:Option[String],
 		examName:Option[String],
 	  	category:List[String];

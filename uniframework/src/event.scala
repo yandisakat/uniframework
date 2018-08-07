@@ -5,24 +5,24 @@ import java.time.LocalDateTime
 import play.api.libs.json.Json
 
 /**
-  *@parm event_ID - Event ID
-  *@parm event_Name - Name of the event
-  *@parm event_Location - Where event is held
-  *@parm event_Organisation - rganisation responsible for the event
-  *@parm event_Date - Date of the event
-  *@parm event_Time - The time the event is starting
-  *@parm event_ContactPersonName - Person's name responsible for the event
-  *@parm event_ContactPersonNumber - Person's number responsible for the event
+  *@parm eventID - Event ID
+  *@parm eventName - Name of the event
+  *@parm eventLocation - Where event is held
+  *@parm eventOrganisation - rganisation responsible for the event
+  *@parm eventDate - Date of the event
+  *@parm eventTime - The time the event is starting
+  *@parm eventContactPersonName - Person's name responsible for the event
+  *@parm eventContactPersonNumber - Person's number responsible for the event
   */
   
-case class Event(event_ID:Int,
-                event_Name:String, 
-                event_Location:String, 
-                event_Organisation:String, 
-                event_Date:LocalDateTime, 
-                event_Time:LocalDateTime, 
-                event_ContactPersonName:String,
-                event_ContactPersonNumber:String)
+case class Event(eventID:Int,
+                eventName:String, 
+                eventLocation:String, 
+                eventOrganisation:String, 
+                eventDate:LocalDateTime, 
+                eventTime:LocalDateTime, 
+                eventContactPersonName:String,
+                eventContactPersonNumber:String)
 
 object Event{
   implicit val eventFmt = Json.format[Event]

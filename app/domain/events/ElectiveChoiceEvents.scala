@@ -2,9 +2,11 @@ package domain.events
 import java.time.LocalDateTime
 
 /**
-  * @created by Kessel
-  * @param studId student unique ID
-  * @param subjId subject unique ID
+  *
+  * created by Kessel
+  *
+  * @param studID
+  * @param subjID
   * @param eventDate
   */
 

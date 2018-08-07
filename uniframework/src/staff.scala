@@ -6,26 +6,26 @@ import java.time.LocalDateTime
 import play.api.libs.json.Json
 
 /**
-  *@parm staff_ID - Staff ID
-  *@parm staff_Name - Name of staff member
-  *@parm staff_Surname - Surname of staff member
-  *@parm staff_Email - Email of staff member
-  *@parm staff_DOB - Date of birth of staff member
-  *@parm staff_Type - Type of staff member admin/lecturer/cleaners
-  *@parm staff_Phone - Telephone number of staff member
-  *@parm staff_Cellno - Cellphone number of staff member
-  *@parm staff_Address - Address of staff member
+  *@parm staffID - Staff ID
+  *@parm staffName - Name of staff member
+  *@parm staffSurname - Surname of staff member
+  *@parm staffEmail - Email of staff member
+  *@parm staffDOB - Date of birth of staff member
+  *@parm staffType - Type of staff member admin/lecturer/cleaners
+  *@parm staffPhone - Telephone number of staff member
+  *@parm staffCellno - Cellphone number of staff member
+  *@parm staffAddress - Address of staff member
   */
 
- case class Staff(staff_ID:Int, 
-            staff_Name:String, 
-            staff_Surname:String, 
-            staff_Email:String, 
-            staff_DOB:LocalDateTime, 
-            staff_Type:String, 
-            staff_Phone:String, 
-            staff_Cellno:String, 
-            staff_Address:String)
+ case class Staff(staffID:Int, 
+            staffName:String, 
+            staffSurname:String, 
+            staffEmail:String, 
+            staffDOB:LocalDateTime, 
+            staffType:String, 
+            staffPhone:String, 
+            staffCellno:String, 
+            staffAddress:String)
 
 object Staff{
   implicit val staffFmt = Json.format[Staff]
@@ -33,39 +33,3 @@ object Staff{
 "12/05/1960", "Admin", "0219735622", "0744226677", "12 Greyhound Road, Cape Town, 
 7600")
 }
-
-package domain.staff
-
-import java.time.LocalDateTime
-
-import play.api.libs.json.Json
-
-/**
-  *@parm staff_ID - Staff ID
-  *@parm staff_Name - Name of staff member
-  *@parm staff_Surname - Surname of staff member
-  *@parm staff_Email - Email of staff member
-  *@parm staff_DOB - Date of birth of staff member
-  *@parm staff_Type - Type of staff member admin/lecturer/cleaners
-  *@parm staff_Phone - Telephone number of staff member
-  *@parm staff_Cellno - Cellphone number of staff member
-  *@parm staff_Address - Address of staff member
-  */
-
- case class Staff(staff_ID:Int, 
-            staff_Name:String, 
-            staff_Surname:String, 
-            staff_Email:String, 
-            staff_DOB:LocalDateTime, 
-            staff_Type:String, 
-            staff_Phone:String, 
-            staff_Cellno:String, 
-            staff_Address:String)
-
-object Staff{
-  implicit val staffFmt = Json.format[Staff]
-  def identityStaff: Staff = Staff(123 , "Helen", "Van Dyk", "vandykh@cput.ac.za", 
-"12/05/1960", "Admin", "0219735622", "0744226677", "12 Greyhound Road, Cape Town, 
-7600")
-}
-
