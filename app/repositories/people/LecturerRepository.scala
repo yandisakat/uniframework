@@ -2,19 +2,19 @@ package repositories.people
 
 import com.outworkers.phantom.dsl._
 import conf.connections.DataConnection
-import repositories.people.tables.PeopleTablelmpl
+import repositories.lecturer.tables.LecturerTablelmpl
 
 
-class peopleDatabase(override val connector: KeySpaceDef)extends Database [peopleDatabase](connect) {
+class LecturerDatabase(override val connector: KeySpaceDef)extends Database [lecturerDatabase](connect) {
 
 
-  object peopleTable extends peopleTableLmpl with connector.Connector
+  object peopleTable extends LecturerTableLmpl with connector.Connector
 
 }
 
 
-object peopleDatabase extends PeopleDatabase(DataConnection.connector)
+object peopleDatabase extends LecturerDatabase(DataConnection.connector)
 
 trait PeopleRepository {
-  def database = PeopleDatabase
+  def database = LecturerDatabase
 }
