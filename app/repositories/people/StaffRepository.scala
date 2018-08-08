@@ -6,6 +6,7 @@ import repositories.people.tables._
 
 /*
  * By Yandisa Katiya
+ * Reviewed by Thomas 
  */
 
 class StaffDatabase(override val connector: KeySpaceDef) extends Database(StaffDatabase](connector)
