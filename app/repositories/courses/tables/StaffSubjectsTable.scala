@@ -21,7 +21,7 @@ abstract class StaffSubjectsTable extends Table[StaffSubjectsTable, Table]
     
 }
 
-abstract class StaffSubjectsImpl extends StaffSubjectsTable with RootConnector
+abstract class StaffSubjectsTableImpl extends StaffSubjectsTable with RootConnector
 {
     override lazy val tableName = "staffSubjects"
   
