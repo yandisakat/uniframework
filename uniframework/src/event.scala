@@ -5,14 +5,14 @@ import java.time.LocalDateTime
 import play.api.libs.json.Json
 
 /**
-  *@parm eventID - Event ID
-  *@parm eventName - Name of the event
+  *@parm eventID 
+  *@parm eventName
   *@parm eventLocation - Where event is held
-  *@parm eventOrganisation - rganisation responsible for the event
-  *@parm eventDate - Date of the event
-  *@parm eventTime - The time the event is starting
-  *@parm eventContactPersonName - Person's name responsible for the event
-  *@parm eventContactPersonNumber - Person's number responsible for the event
+  *@parm eventOrganisation - organisation responsible 
+  *@parm eventDate 
+  *@parm eventTime 
+  *@parm eventContactPersonName
+  *@parm eventContactPersonNumber
   */
   
 case class Event(eventID:Int,
