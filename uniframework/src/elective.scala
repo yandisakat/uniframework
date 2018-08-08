@@ -9,8 +9,8 @@ import play.api.libs.json.Json
   *@parm electiveName - 
   *@parm electiveDescription - 
   *@parm electiveStatus - Status of space in the elective
-  *@parm electiveCredits - Amount of credits for the elective
-  *@parm electiveDuration - How long the elective will last
+  *@parm electiveCredits - Amount of credits awarded for elective
+  *@parm electiveDuration - 
   */
 
  case class Elective(electiveCode:String, 
