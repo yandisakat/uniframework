@@ -34,7 +34,7 @@ abstract class StaffSubjectsTableImpl extends StaffSubjectsTable with RootConnec
         .future()
     }
   
-    def getStaffSubjects(staffId: String, subjectId):Future[Seq[StaffSubjects]] =
+    def getStaffSubjects(staffId: String, subjectId: String):Future[Seq[StaffSubjects]] =
     {
       select
         .where(_.staffId eqs staffId)
