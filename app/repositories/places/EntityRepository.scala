@@ -2,7 +2,7 @@ package repositories.places
 
 import com.outworkers.phantom.dsl._
 import conf.connections.DataConnection
-import repositories.place.tables.EntityTableImpl
+import repositories.places.tables.EntityTableImpl
 
 class EntityDatabase(override val connector: KeySpaceDef) extends Database[EntityDatabas](connector) {
   object EntityTable extends EntityTableImpl with connector.Connector
