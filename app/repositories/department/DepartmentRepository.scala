@@ -10,7 +10,7 @@ import repositories.department.tables._
 
 class DepartmentDatabase(override val connector: KeySpaceDef) extends Database[DepartmentDatabase](connector)
 {
-  object DepartmentTable extends DepartmentTableImp with connector.Connector
+  object DepartmentTable extends DepartmentTableImpl with connector.Connector
 }
 
 object DepartmentDatabase extends DepartmentDatabase(DataConnection.connector)
