@@ -17,7 +17,7 @@ abstract class StaffSubjectsTable extends Table[StaffSubjectsTable, Table]
     
     object subjectId extends StringColumn with PrimaryKey with ClusteringOrder with Ascending
   
-    object staffSubjType extends StringColumn
+    object subjectName extends StringColumn
     
 }
 
@@ -30,7 +30,7 @@ abstract class StaffSubjectsImpl extends StaffSubjectsTable with RootConnector
       insert 
         .value(_.staffId, role.staffId)
         .value(_.subjectId, role.subjectId)
-        .value(_.staffSubjType, role.staffSubjType)
+        .value(_.subjectName, role.subjectName)
         .future()
     }
   
