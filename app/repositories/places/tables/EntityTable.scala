@@ -5,7 +5,7 @@ import java.time.LocalDateTime
 import com.outworkers.phantom.dsl._
 import com.outworkers.phantom.jdk8._
 import com.outworkers.phantom.streams._
-import domain.courses.Faculty
+import domain.courses.Places
 
 import scala.concurrent.Future
 
