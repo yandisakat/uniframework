@@ -3,10 +3,10 @@
  *  214218244
  */
 
-case class TextBook (val isbn_code: String, val auth: String, val titl: String, val editn: String, val publishr: String,// val subjct: Subject
+case class TextBook (val isbnCode: String, val auth: String, val titl: String, val editn: String, val publishr: String,// val subjct: Subject
     )
 {
-  private var _isbn: String = isbn_code;
+  private var _isbn: String = isbnCode;
   private var _author: String = auth;
   private var _title: String = titl;
   private var _edition: String = editn;
