@@ -1,14 +1,14 @@
 package services.places
 
 import com.datastax.driver.core.ResultSet
-import domain.courses.Faculty
-import services.courses.Impl.EntityImpl
+import domain.pdomain.places.Place
+import services.places.Impl.EntityImpl
 
 import scala.concurrent.Future
 
 trait EntityServices {
 
-  def save(ent: Entity): Future[ResultSet]
+  def save(entity: Entity): Future[ResultSet]
 
   def getEntities(entityId: String): Future[Seq[Entity]]
 
