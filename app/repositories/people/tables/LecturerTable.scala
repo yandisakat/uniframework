@@ -42,7 +42,7 @@ abstract class LecturerTableImpl extends LecturerTable with RootConnector {
       .future()
   }
 
-  def getUserRoles(lectId:String, email: String): Future[Seq[UserRole]] = {
+  def getLecturers(lectId:String, email: String): Future[Seq[Lecturer]] = {
     select
       .where(_.lectId eqs lectId)
       .and(_.email eqs email)
