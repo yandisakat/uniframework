@@ -1,5 +1,12 @@
 package repositories.people
 
+
+/**
+  * created by Kessel
+  * reviewer wailed
+  */
+
+
 import com.outworkers.phantom.dsl._
 import conf.connections.DataConnection
 import repositories.people.tables.LecturerTableImpl
