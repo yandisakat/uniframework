@@ -33,8 +33,8 @@ abstract class EntityImpl extends EntityTable with RootConnector {
       .value(_.entityId, entity.facId)
       .value(_.entityName, entity.entityName)
       .value(_.uniId, entity.uniId)
-	  .value(_.facultyId, entity.facultyId)
-	  .value(_.departmentId, entity.departmentId)
+      .value(_.facultyId, entity.facultyId)
+      .value(_.departmentId, entity.departmentId)
       .future()
   }
 
