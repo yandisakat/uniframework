@@ -20,7 +20,7 @@ abstract class LoginEventTable extends Table[LoginEventTable, LoginEvent] {
 
 }
 
-abstract class LoginEventTableImpl extends PersonTable with RootConnector {
+abstract class LoginEventTableImpl extends LoginEventTable with RootConnector {
 
   override lazy val tableName = "event"
 
