@@ -2,6 +2,7 @@ package repositories.people.tables
 
 /*
  * By Yandisa Katiya
+ * Reviewed by Dorcas
  */
 
 import java.time.LocalDateTime
