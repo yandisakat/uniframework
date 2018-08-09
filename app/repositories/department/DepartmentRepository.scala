@@ -4,7 +4,8 @@ import com.outworkers.phantom.dsl._
 import conf.connections.DataConnection
 import repositories.department.tables._
 /*
- *  By Yandisa Katiya 
+ *  By Yandisa Katiya
+ *  Reviewed by Dorcas
  */
 
 
