@@ -2,10 +2,11 @@ package repositories.places
 
 import com.outworkers.phantom.dsl._
 import conf.connections.DataConnection
-import repositories.users.tables.VenueTableImpl
+import repositories.places.tables.VenueTableImpl
 
 /*
- * @created by Natasha
+ *created by Natasha
+ *reviewer Kessel
  */
 
 class VenueDatabase(override val connector: KeySpaceDef) extends Database[VenueDatabase](connector) {
