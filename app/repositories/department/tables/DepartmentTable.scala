@@ -2,6 +2,7 @@ package repositories.department.tables
 
 /*
  * By Yandisa Katiya
+ * Reviewed by Dorcas
  */
  
 import com.outworkers.phantom.dsl._
