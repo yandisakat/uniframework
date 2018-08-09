@@ -2,19 +2,19 @@ package repositories.people
 
 import com.outworkers.phantom.dsl._
 import conf.connections.DataConnection
-import repositories.lecturer.tables.LecturerTablelmpl
+import repositories.people.tables.LecturerTableImpl
 
+/**
+  * created by Kessel
+  * reviewer wailed
+  */
 
-class LecturerDatabase(override val connector: KeySpaceDef)extends Database [lecturerDatabase](connect) {
-
-
-  object lecturerTable extends LecturerTableLmpl with connector.Connector
-
+class LecturerDatabase(override val connector: KeySpaceDef) extends Database[LecturerDatabase](connector) {
+  object lecturerTable extends LecturerTableImpl with connector.Connector
 }
 
+object LecturerDatabase extends LecturerDatabase(DataConnection.connector)
 
-object peopleDatabase extends LecturerDatabase(DataConnection.connector)
-
-trait PeopleRepository {
+trait LecturerRepository {
   def database = LecturerDatabase
 }

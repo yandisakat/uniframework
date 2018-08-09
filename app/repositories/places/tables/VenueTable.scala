@@ -10,7 +10,8 @@ import domain.places.Venue
 import scala.concurrent.Future
 
 /*
- * @created by Natasha
+ * created by Natasha
+ *reviewer Kessel
  * @param venueId
  * @param venueName
  * @param capacity

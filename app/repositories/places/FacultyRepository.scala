@@ -1,11 +1,16 @@
-package repositories.courses
+package repositories.places
 
 import com.outworkers.phantom.dsl._
 import conf.connections.DataConnection
-import repositories.courses.tables.FacultyTableImpl
+import repositories.places.tables._
 
 class FacultyDatabase(override val connector: KeySpaceDef) extends Database[FacultyDatabase](connector) {
-  object facultyTable extends FacultyTableImpl with connector.Connector
+
+  object FacultyTable extends FacultyTableImpl with connector.Connector
+
+  object FacultyTable extends FacultyOrgTableImpl with connector.Connector
+
+
 }
 
 object FacultyDatabase extends FacultyDatabase(DataConnection.connector)

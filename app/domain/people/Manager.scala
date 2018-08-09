@@ -5,10 +5,10 @@ import play.api.libs.json.Jso
 
 /**
   *
-  * created by Kessel
   * @param managerID
   * @param firstname
   * @param lastname
+  * @param dateofbirth
   * @param telNo
   * @param emailAddr
   * @param addr
@@ -17,12 +17,11 @@ import play.api.libs.json.Jso
   *
   */
 
-
-case class Manager(managerID: String, firstname: String, lastname: String, telNo: Int, emailAddr: String, addr: String, managerStartDate: LocalDateTime, managerEndDate: LocalDateTime)
+case class Manager(managerID: String, firstname: String, lastname: String,dateofbirth: LocalDate, telNo: Int, emailAddr: String, addr: String, managerStartDate: LocalDateTime, managerEndDate: LocalDateTime)
 
 object Manager {
 
   implicit val managerFormat = Json.format[Manager]
-  def identity: Manager = Manager("","","",0,"","",LocalDateTime.now(),LocalDateTime.now())
+  def identity: Manager = Manager("","","",LocalDateTime.now(),0,"","",LocalDateTime.now(),LocalDateTime.now())
 
 }

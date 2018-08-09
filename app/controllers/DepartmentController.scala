@@ -8,6 +8,8 @@ import play.api.mvc.{AbstractController, ControllerComponents}
   */
 class DepartmentController @Inject()(cc: ControllerComponents) extends AbstractController(cc)  {
 
-
+  def index = Action {
+    Ok("Department controller is working")
+}
 }
 
