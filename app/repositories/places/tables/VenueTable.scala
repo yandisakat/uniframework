@@ -1,52 +1,59 @@
 package repositories.places.tables
 
 import java.time.LocalDateTime
+
 import com.outworkers.phantom.dsl._
 import com.outworkers.phantom.jdk8._
 import com.outworkers.phantom.streams._
 import domain.places.Venue
+
 import scala.concurrent.Future
 
-/**
-  * By Yandisa Katiya - 2018/07/21
-  */
+/*
+ * created by Natasha
+ *reviewer Kessel
+ * @param venueId
+ * @param venueName
+ * @param capacity
+ * @param description
+ */
 
-abstract class VenueTable extends Table[VenueTable]
-{
-  object venueId extends StringColumn with PrimaryKey with ClusteringOrder with Ascending
-  object entityId extends StringColumn with PartitionKey
+abstract class VenueTable extends Table[VenueTable, Venue] {
+
+  object venueId extends StringColumn with PartitionKey
+
+  object venueName extends StringColumn with PrimaryKey with ClusteringOrder with Ascending
+
   object capacity extends IntColumn
-  object venueName extends StringColumn
+
+  object description extends StringColumn
+
 }
 
-abstract class VenueTableImpl extends VenueTable with RootConnector
-{
-  override lazy val tableName = "Venues"
-  
-  def save(role: Venue): Future[ResultSet] = 
-  {
+abstract class VenueTableImpl extends VenueTable with RootConnector {
+
+  override lazy val tableName = "venue"
+
+  def save(role: Venue): Future[ResultSet] = {
     insert
       .value(_.venueId, role.venueId)
-      .value(_.entityId, role.entityId)
-      .value(_.capacity, role.capacity)
       .value(_.venueName, role.venueName)
+      .value(_.capacity, role.capacity)
+      .value(_.description, role.description)
       .future()
   }
-  
-  def getVenues(venueId:String, entityId:String):Future[Seq[Venue]] =
-  {
+
+  def getVenues(venueId:String, venueName: String): Future[Seq[Venue]] = {
     select
-      .where(_.venueId eqs venueId)
-      .and(entityId eqs entityId)
+      .where(_.orgId eqs orgId)
+      .and(_.emailId eqs emailId)
       .fetchEnumerator() run Iteratee.collect()
   }
-  
-  
-  def deleteVenues(venueId:String, entityId:String):Future[ResultSet]=
-  {
+
+  def deleteVenues(venueId:String,venueName:String):Future[ResultSet] ={
     delete
       .where(_.venueId eqs venueId)
-      .and (_.entityId eqs entityId)
+      .and(_.venueName eqs venueName)
       .future()
   }
 }

@@ -1,16 +1,24 @@
-//package domain.events
+package domain.events
 
 import java.time.LocalDateTime
 import play.api.libs.json.Json
 
-case class LoginEvents(username: String,
-                       password: String)
+/**
+  *
+  * created by Kessel
+  * @param username
+  * @param password
+  * @param loginDate
+  
+  */
+
+
+case class LoginEvents(username: String, password: String, loginDate:LocalDateTime)
 
 object LoginEvents {
 
-  implicit val Login = {
-    Json.format[LoginEvents]
-  }
-  def identity: LoginEvents = LoginEvents ("","")
+  implicit val Login = Json.format[LoginEvents]
+
+  def identity: LoginEvents = LoginEvents ("","",LocalDateTime.now())
 
 }

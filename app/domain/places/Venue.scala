@@ -1,9 +1,18 @@
 package domain.places
-
 import play.api.libs.json.Json
 
-case class Venue(venueId:String, venueName: String, entityId:String, capacity: Int)
+/*
+ * @created by Yandisa Katiya
+ * @param venueId
+ * @param venueName
+ * @param capacity
+ * @param description
+ */
 
-object Venue{
+case class Venue(venueId:String, venueName:String, capacity: Int, description: String)
+
+object Venue
+{
   implicit val venueJson = Json.format[Venue]
+  def definity: Venue = Venue ("", "",0,"")
 }
