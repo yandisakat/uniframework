@@ -11,7 +11,7 @@ import scala.concurrent.Future
 
 /*
  * created by Natasha
- *reviewer Kessel
+ * reviewer Kessel
  * @param venueId
  * @param venueName
  * @param capacity
@@ -45,8 +45,8 @@ abstract class VenueTableImpl extends VenueTable with RootConnector {
 
   def getVenues(venueId:String, venueName: String): Future[Seq[Venue]] = {
     select
-      .where(_.orgId eqs orgId)
-      .and(_.emailId eqs emailId)
+      .where(_.venueId eqs orgId)
+      .and(_.venueName eqs emailId)
       .fetchEnumerator() run Iteratee.collect()
   }
 
