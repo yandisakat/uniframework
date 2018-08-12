@@ -6,6 +6,7 @@ import repositories.places.tables._
 
 /*
  * By Yandisa Katiya
+ * reviewed by Natasha
  */
 
 class CampusDatabase(override val connector: KeySpaceDef) extends Database[CampusDatabase](connector)
