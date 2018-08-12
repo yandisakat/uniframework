@@ -24,7 +24,7 @@ import java.time.LocalDate
 
 case class Student(studentId: String,
                    deptId: String,
-                   firstName:String,
+                   firstName: String,
                    lastName: String,
                    initials: String,
                    dateOfBirth: LocalDate,
