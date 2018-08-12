@@ -11,7 +11,7 @@ import repositories.users.tables.SubjectCourseTableImpl
 
 
 class SubjectCourseDatabase(override val connector: KeySpaceDef) extends Database[SubjectCourseDatabase](connector) {
-  object subjectCourseTable extends UserRoleTableImpl with connector.Connector
+  object subjectCourseTable extends SubjectCourseTableImpl with connector.Connector
 }
 
 object SubjectCourseDatabase extends SubjectCourseDatabase(DataConnection.connector)
