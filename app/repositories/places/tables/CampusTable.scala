@@ -2,7 +2,9 @@ package repositories.places.tables
 
 /*
  * By Yandisa Katiya
+ * reviewed by Natasha
  */
+
 import com.outworkers.phantom.dsl._
 import com.outworkers.phantom.jdk8._
 import com.outworkers.phantom.streams._
