@@ -6,6 +6,7 @@ import repositories.assessment.tables._
 
 /*
  * By Yandisa Katiya
+ * Reviewer Kessel
  */
 
 class MarkDatabase(override val connector: KeySpaceDef) extends Database[MarkDatabase](connector)
