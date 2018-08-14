@@ -1,5 +1,4 @@
 /**
-  *
-  * creater Thomas
-  * reviewer  Dorcas
-  */
+ * creater Omega
+ * reviewer Dorcas
+ */
