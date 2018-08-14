@@ -1,5 +1,11 @@
 package services.places.Impl
 
+/**
+ * creater Reece
+ * reviewer Wailed
+ *
+ */
+
 import com.datastax.driver.core.ResultSet
 import domain.places.Venue
 import repositories.places.VenueRepository
