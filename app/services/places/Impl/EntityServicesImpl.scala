@@ -1,5 +1,11 @@
 package services.places.Impl
 
+/**
+ * creater Reece
+ * reviewer Natasha
+ *
+ */
+
 import com.datastax.driver.core.ResultSet
 import domain.places.Entity
 import repositories.places.EntityRepository
