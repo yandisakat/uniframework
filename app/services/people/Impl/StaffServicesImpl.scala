@@ -1,5 +1,11 @@
 package services.people.Impl
 
+/**
+ * creater Yandisa
+ * reviewer Kessel
+ *
+ */
+
 import com.datastax.driver.core.ResultSet
 import domain.people.Staff
 import repositories.people.StaffRepository
