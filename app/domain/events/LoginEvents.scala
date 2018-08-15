@@ -13,7 +13,9 @@ import play.api.libs.json.Json
   */
 
 
-case class LoginEvents(username: String, password: String, loginDate:LocalDateTime)
+case class LoginEvents(username: String,
+                       password: String,
+                       loginDate:LocalDateTime)
 
 object LoginEvents {
 
