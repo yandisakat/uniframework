@@ -2,10 +2,11 @@ package repositories.places
 
 import com.outworkers.phantom.dsl._
 import conf.connections.DataConnection
-import repositories.places.tables._
+import repositories.places.tables.CampusTableImpl
 
 /*
  * By Yandisa Katiya
+ * reviewed by Natasha
  */
 
 class CampusDatabase(override val connector: KeySpaceDef) extends Database[CampusDatabase](connector)

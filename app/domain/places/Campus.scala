@@ -5,6 +5,7 @@ import domain.courses.Faculty
 
 /**
   * created by Reece Waldeck
+  * Reviewed by Natasha
   * @param campId
   * @param campName
   * @param campAddr

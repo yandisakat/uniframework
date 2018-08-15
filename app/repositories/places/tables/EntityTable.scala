@@ -9,6 +9,10 @@ import domain.courses.Places
 
 import scala.concurrent.Future
 
+/**
+  * created by Thomas
+  * reviewed by Natasha
+  */
 
 abstract class EntityTable extends Table[EntityTable, Entity] {
 
