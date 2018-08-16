@@ -34,7 +34,7 @@ abstract class ExamTableImpl extends ExamTable with RootConnector {
   def save(exam: Exam): Future[ResultSet] = {
     insert
       .value(_.examId, exam.examId)
-      .value(_.subjectId, role.subjectId)
+      .value(_.subjectId, exam.subjectId)
       .value(_.subjectName, role.subjectName)
       .value(_.venueNo, role.venueNo)
       .value(_.examTime, role.examTime)
