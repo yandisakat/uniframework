@@ -42,8 +42,8 @@ abstract class StudentTableImpl extends StudentTable with RootConnector {
     insert
       .value(_.studentId, std.studentId)
       .value(_.deptId, std.deptId)
-      .value(_.firstName, role.firstName)
-      .value(_.lastName, role.lastName)
+      .value(_.firstName, std.firstName)
+      .value(_.lastName, std.lastName)
       .value(_.initial, role.initial)
       .value(_.dateOfbirth, role.dateOfbirth)
       .value(_.address, role.address)
