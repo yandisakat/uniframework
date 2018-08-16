@@ -25,7 +25,7 @@ abstract class ElectiveTableImpl extends ElectiveTable with RootConnector
 {
   override lazy val tableName = "Elective"
   
-  def save(role: Elective): Future[ResultSet] = 
+  def save(elective: Elective): Future[ResultSet] = 
   {
     insert
       .value(_.elective_Code, role.elective_Code)
