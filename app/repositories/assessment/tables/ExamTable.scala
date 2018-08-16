@@ -11,6 +11,8 @@ import scala.concurrent.Future
 
 abstract class ExamTable extends Table[ExamTable, Exam] {
   
+  object examId extends StringColumn with PrimaryKey
+  
   object subjectId extends StringColumn with PartitionKey
 
   object subjectName extends StringColumn with PrimaryKey with ClusteringOrder with Ascending
