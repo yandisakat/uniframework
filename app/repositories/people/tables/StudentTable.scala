@@ -38,10 +38,10 @@ abstract class StudentTableImpl extends StudentTable with RootConnector {
 
   override lazy val tableName = "student"
 
-  def save(role: Student): Future[ResultSet] = {
+  def save(std: Student): Future[ResultSet] = {
     insert
-      .value(_.studentId, role.studentId)
-      .value(_.deptId, role.deptId)
+      .value(_.studentId, std.studentId)
+      .value(_.deptId, std.deptId)
       .value(_.firstName, role.firstName)
       .value(_.lastName, role.lastName)
       .value(_.initial, role.initial)
