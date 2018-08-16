@@ -11,7 +11,11 @@ import play.api.libs.json.Json
 * @param subjects  list of subjects belonging to the course
 */
 
-case class Course(courseId:String, name:String, description:String,credits:Double,subjects:List[String])
+case class Course(courseId:String,
+                  name:String,
+                  description:String,
+                  credits:Double,
+                  subjects:List[String])
 
 object Course
 {

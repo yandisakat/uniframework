@@ -35,16 +35,16 @@ abstract class MarkTableImpl extends MarkTable with RootConnector
 {
   override lazy val tableName = "mark"
   
-  def save(role: mark): Future[ResultSet] =
+  def save(mark: Mark): Future[ResultSet] =
   {
       insert
-        .value(_.studentId, role.studentId)
-        .value(_.subjectId, role.subjectId)
-        .value(_.subjectName, role.subjectName)
-        .value(_.examiner, role.examiner)
-        .value(_.date, role.date)
-        .value(_.mark, role.mark)
-  `     .value(_.assessmentWeight, role.assessmentWeight)
+        .value(_.studentId, mark.studentId)
+        .value(_.subjectId, mark.subjectId)
+        .value(_.subjectName, mark.subjectName)
+        .value(_.examiner, mark.examiner)
+        .value(_.date,mark.date)
+        .value(_.mark, mark.mark)
+  `     .value(_.assessmentWeight, mark.assessmentWeight)
         .future()
   }
   

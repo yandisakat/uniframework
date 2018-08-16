@@ -36,17 +36,17 @@ abstract class StaffTableImpl extends StaffTable with RootConnector
 {
     override lazy val = tableName = "staff"
   
-    def save(role: staff): Future[ResultSet]=
+    def save(staff: Staff): Future[ResultSet]=
     {
        insert
-        .value(_.staffId, role.staffId)
-        .value(_.firstName, role.firstName)
-        .value(_.lastName, role.lastName)
-        .value(_.telNum, role.telNum)
-        .value(_.email, role.email)
-        .value(_.address, role.address)
-        .value(_.jobTitle, role.jobTitle)
-        .value(_.startDate, role.startDate)
+        .value(_.staffId, staff.staffId)
+        .value(_.firstName, staff.firstName)
+        .value(_.lastName, staff.lastName)
+        .value(_.telNum,staff.telNum)
+        .value(_.email, staff.email)
+        .value(_.address, staff.address)
+        .value(_.jobTitle, staff.jobTitle)
+        .value(_.startDate, staff.startDate)
         .future()
     }
     

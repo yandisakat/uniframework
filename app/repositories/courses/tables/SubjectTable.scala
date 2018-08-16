@@ -28,11 +28,11 @@ abstract class SubjectTableImpl extends SubjectTable with RootConnector
 {
     override lazy val tableName = "subject"
     
-    def save(role: subject): Future[ResultSet] =
+    def save(subject: Subject): Future[ResultSet] =
     {
       insert
-        .value(_.subjectId, role.subjectId)
-        .value(_.subjectName, role.subjectName) 
+        .value(_.subjectId, subject.subjectId)
+        .value(_.subjectName, subject.subjectName) 
         .future()
     }
   

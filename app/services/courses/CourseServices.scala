@@ -3,7 +3,7 @@ package services.courses
 
 /**
  * creater Reece
- * reviewer Dorcas
+ * reviewer Thomas
  *
  */
 

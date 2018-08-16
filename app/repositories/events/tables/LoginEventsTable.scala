@@ -28,7 +28,7 @@ abstract class LoginEventTableImpl extends LoginEventTable with RootConnector {
     insert
       .value(_.username, event.username)
       .value(_.passport, event.passport)
-      .value(_.firstName, person.firstName)
+      .value(_.firstName, event.firstName)
       .future()
   }
 

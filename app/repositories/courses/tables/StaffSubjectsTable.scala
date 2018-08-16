@@ -25,12 +25,12 @@ abstract class StaffSubjectsTableImpl extends StaffSubjectsTable with RootConnec
 {
     override lazy val tableName = "staffSubjects"
   
-    def save(role: staffSubjects): Future[ResultSet] =
+    def save(staffSub: StaffSubjects): Future[ResultSet] =
     {
       insert 
-        .value(_.staffId, role.staffId)
-        .value(_.subjectId, role.subjectId)
-        .value(_.subjectName, role.subjectName)
+        .value(_.staffId, staffSub.staffId)
+        .value(_.subjectId, staffSub.subjectId)
+        .value(_.subjectName, staffSub.subjectName)
         .future()
     }
   

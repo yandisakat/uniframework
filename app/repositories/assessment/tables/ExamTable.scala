@@ -11,6 +11,8 @@ import scala.concurrent.Future
 
 abstract class ExamTable extends Table[ExamTable, Exam] {
   
+  object examId extends StringColumn with PrimaryKey
+  
   object subjectId extends StringColumn with PartitionKey
 
   object subjectName extends StringColumn with PrimaryKey with ClusteringOrder with Ascending
@@ -29,14 +31,15 @@ abstract class ExamTableImpl extends ExamTable with RootConnector {
 
   override lazy val tableName = "exam"
 
-  def save(role: exam): Future[ResultSet] = {
+  def save(exam: Exam): Future[ResultSet] = {
     insert
-      .value(_.subjectId, role.subjectId)
-      .value(_.subjectName, role.subjectName)
-      .value(_.venueNo, role.venueNo)
-      .value(_.examTime, role.examTime)
-      .value(_.examController, role.examController)
-      .value(_.examDate, role.examDate)
+      .value(_.examId, exam.examId)
+      .value(_.subjectId, exam.subjectId)
+      .value(_.subjectName, exam.subjectName)
+      .value(_.venueNo, exam.venueNo)
+      .value(_.examTime, exam.examTime)
+      .value(_.examController,exam.examController)
+      .value(_.examDate, exam.examDate)
       .future()
   }
 

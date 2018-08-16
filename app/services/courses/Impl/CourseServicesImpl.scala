@@ -1,11 +1,10 @@
 package services.courses.Impl
 
-/** 
+/**
  * creater Reece
- * reviewer Dorcas
+ * reviewer Thomas
  *
- *
-*/
+ */
 
 import com.datastax.driver.core.ResultSet
 import domain.courses.Course

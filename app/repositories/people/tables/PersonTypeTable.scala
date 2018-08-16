@@ -28,7 +28,7 @@ abstract class PersonTable extends Table[PersonTable, Person] {
 
 }
 
-abstract class PersonTableImpl extends PersonTable with RootConnector {
+abstract class PersonTypeTableImpl extends PersonTypeTable with RootConnector {
 
   override lazy val tableName = "person"
 
