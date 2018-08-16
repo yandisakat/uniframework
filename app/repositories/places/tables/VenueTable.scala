@@ -34,12 +34,12 @@ abstract class VenueTableImpl extends VenueTable with RootConnector {
 
   override lazy val tableName = "venue"
 
-  def save(role: Venue): Future[ResultSet] = {
+  def save(venue: Venue): Future[ResultSet] = {
     insert
-      .value(_.venueId, role.venueId)
-      .value(_.venueName, role.venueName)
-      .value(_.capacity, role.capacity)
-      .value(_.description, role.description)
+      .value(_.venueId, venue.venueId)
+      .value(_.venueName, venue.venueName)
+      .value(_.capacity, venue.capacity)
+      .value(_.description, venue.description)
       .future()
   }
 
