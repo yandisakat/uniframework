@@ -27,7 +27,7 @@ abstract class DepartmentTableImpl extends DepartmentTable with RootConnector
 {
   override lazy val tableName = "department"
   
-  def save(role:department): Future[ResultSet] =
+  def save(dep:Department): Future[ResultSet] =
   { 
     insert
       .value(_.deptId, role.deptId)
