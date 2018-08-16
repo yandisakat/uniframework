@@ -38,7 +38,7 @@ abstract class ExamTableImpl extends ExamTable with RootConnector {
       .value(_.subjectName, exam.subjectName)
       .value(_.venueNo, exam.venueNo)
       .value(_.examTime, exam.examTime)
-      .value(_.examController, role.examController)
+      .value(_.examController,exam.examController)
       .value(_.examDate, role.examDate)
       .future()
   }
