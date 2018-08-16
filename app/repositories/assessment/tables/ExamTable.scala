@@ -33,6 +33,7 @@ abstract class ExamTableImpl extends ExamTable with RootConnector {
 
   def save(role: exam): Future[ResultSet] = {
     insert
+      .value(_.examId, exam.examId)
       .value(_.subjectId, role.subjectId)
       .value(_.subjectName, role.subjectName)
       .value(_.venueNo, role.venueNo)
