@@ -24,3 +24,5 @@ class ExamServicesImpl extends ExamRepository with ExamService{
    def getExamDetails(examId: String): Future[Exam] = {
       database.ExamTable.getExamDetails(examId).map(exam => exam.head)
   }
+           
+   def deleteExam(examId:String):Future[ResultSet] ={
