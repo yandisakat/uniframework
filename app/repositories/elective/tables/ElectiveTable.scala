@@ -28,7 +28,7 @@ abstract class ElectiveTableImpl extends ElectiveTable with RootConnector
   def save(elective: Elective): Future[ResultSet] = 
   {
     insert
-      .value(_.elective_Code, role.elective_Code)
+      .value(_.elective_Code, elective.elective_Code)
       .value(_.elective_Name, role.elective_Name)
       .value(_.elective_Description, role.elective_Description)
       .value(_.elective_Status, role.elective_Status)
