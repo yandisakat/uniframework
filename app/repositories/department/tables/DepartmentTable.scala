@@ -27,10 +27,10 @@ abstract class DepartmentTableImpl extends DepartmentTable with RootConnector
 {
   override lazy val tableName = "department"
   
-  def save(dep:Department): Future[ResultSet] =
+  def save(dept:Department): Future[ResultSet] =
   { 
     insert
-      .value(_.deptId, role.deptId)
+      .value(_.deptId, dept.deptId)
       .value(_.deptName, role.deptName)
       .value(_.faculty, role.faculty)
       .value(_.deptHead, role.deptHead)
