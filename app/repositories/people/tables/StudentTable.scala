@@ -47,9 +47,9 @@ abstract class StudentTableImpl extends StudentTable with RootConnector {
       .value(_.initial, std.initial)
       .value(_.dateOfbirth, std.dateOfbirth)
       .value(_.address, std.address)
-      .value(_.telephoneNo, role.telephoneNo)
-      .value(_.level, role.level)
-      .value(_.StudentType, role.StudentType)
+      .value(_.telephoneNo, std.telephoneNo)
+      .value(_.level, std.level)
+      .value(_.StudentType, std.StudentType)
       .future()
   }
 
