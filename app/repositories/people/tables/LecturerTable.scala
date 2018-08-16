@@ -33,12 +33,12 @@ abstract class LecturerTableImpl extends LecturerTable with RootConnector {
 
   def save(lect: Lecturer): Future[ResultSet] = {
     insert
-      .value(_.lectId, role.lectId)
-      .value(_.firstname, role.firstname)
-      .value(_.lastname, role.lastname)
-      .value(_.telephoneNo, role.telephoneNo)
-      .value(_.email, role.email)
-      .value(_.address, role.address)
+      .value(_.lectId, lect.lectId)
+      .value(_.firstname, lect.firstname)
+      .value(_.lastname, lect.lastname)
+      .value(_.telephoneNo, lect.telephoneNo)
+      .value(_.email, lect.email)
+      .value(_.address, lect.address)
       .future()
   }
 
