@@ -31,7 +31,7 @@ abstract class DepartmentTableImpl extends DepartmentTable with RootConnector
   { 
     insert
       .value(_.deptId, dept.deptId)
-      .value(_.deptName, role.deptName)
+      .value(_.deptName,dept.deptName)
       .value(_.faculty, dept.faculty)
       .value(_.deptHead, role.deptHead)
       .future()
