@@ -32,8 +32,8 @@ abstract class ElectiveTableImpl extends ElectiveTable with RootConnector
       .value(_.elective_Name, elective.elective_Name)
       .value(_.elective_Description, elective.elective_Description)
       .value(_.elective_Status, elective.elective_Status)
-      .value(_.elective_Credits, role.elective_Credits)
-      .value(_.elective_Duration, role.elective_Duration)
+      .value(_.elective_Credits, elective.elective_Credits)
+      .value(_.elective_Duration, elective.elective_Duration)
       .future()
   }
   
