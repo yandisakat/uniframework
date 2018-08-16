@@ -29,9 +29,9 @@ abstract class ElectiveTableImpl extends ElectiveTable with RootConnector
   {
     insert
       .value(_.elective_Code, elective.elective_Code)
-      .value(_.elective_Name, role.elective_Name)
-      .value(_.elective_Description, role.elective_Description)
-      .value(_.elective_Status, role.elective_Status)
+      .value(_.elective_Name, elective.elective_Name)
+      .value(_.elective_Description, elective.elective_Description)
+      .value(_.elective_Status, elective.elective_Status)
       .value(_.elective_Credits, role.elective_Credits)
       .value(_.elective_Duration, role.elective_Duration)
       .future()
