@@ -6,7 +6,8 @@ import play.api.libs.json.Json
 
 /**
  * created by Dorcas
- *
+ * @param examId /this variable as been added to identify each exam by its ID seeing that many exams can be written 
+ * the same day and simultaniously
  * @param subjectId
  * @param subjectName
  * @param venueNo   -  the Venue Number
@@ -16,7 +17,8 @@ import play.api.libs.json.Json
  *
  */
 
-case class Exam(subjectId:String,
+case class Exam(examId: String,
+                subjectId:String,
                 subjectName:String,
                 venueNo:String,
                 examTime:String,
