@@ -25,12 +25,12 @@ abstract class CampusTableImpl extends CampusTable with RootConnector
 {
   override lazy val tableName = "campus"
   
-  def save(role: campus): Future[ResultSet] = 
+  def save(campus: Campus): Future[ResultSet] = 
   {
     insert
-      .value(_.campusId, role.campusId)
-      .value(_.campusName, role.campusName)
-      .value(_.location, role.location)
+      .value(_.campusId, campus.campusId)
+      .value(_.campusName, campus.campusName)
+      .value(_.location, campus.location)
       .future()
   }
   
