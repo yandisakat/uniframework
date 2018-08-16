@@ -31,7 +31,7 @@ abstract class ExamTableImpl extends ExamTable with RootConnector {
 
   override lazy val tableName = "exam"
 
-  def save(role: exam): Future[ResultSet] = {
+  def save(exam: Exam): Future[ResultSet] = {
     insert
       .value(_.examId, exam.examId)
       .value(_.subjectId, role.subjectId)
