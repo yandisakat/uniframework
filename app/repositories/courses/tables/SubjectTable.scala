@@ -31,7 +31,7 @@ abstract class SubjectTableImpl extends SubjectTable with RootConnector
     def save(subject: Subject): Future[ResultSet] =
     {
       insert
-        .value(_.subjectId, role.subjectId)
+        .value(_.subjectId, subject.subjectId)
         .value(_.subjectName, role.subjectName) 
         .future()
     }
