@@ -17,3 +17,4 @@ class ExamServicesImpl extends ExamRepository with ExamService{
     database.ExamTable.save(exam)
 
   }
+   def getExamDetails(examId: String): Future[Seq[Exam]] = {
