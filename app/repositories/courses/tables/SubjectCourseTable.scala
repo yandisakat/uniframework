@@ -22,10 +22,10 @@ abstract class SubjectCourseTableImpl extends SubjectCourseTable with RootConnec
 
   override lazy val tableName = "subjectcourse"
 
-  def save(role: SubjectCourse): Future[ResultSet] = {
+  def save(subCourse: SubjectCourse): Future[ResultSet] = {
     insert
-      .value(_.studentId, role.studentId)
-      .value(_.courseId, role.courseId)
+      .value(_.studentId, subCourse.studentId)
+      .value(_.courseId, subCourse.courseId)
       .future()
   }
 
