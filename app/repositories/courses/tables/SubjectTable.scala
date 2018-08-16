@@ -32,7 +32,7 @@ abstract class SubjectTableImpl extends SubjectTable with RootConnector
     {
       insert
         .value(_.subjectId, subject.subjectId)
-        .value(_.subjectName, role.subjectName) 
+        .value(_.subjectName, subject.subjectName) 
         .future()
     }
   
