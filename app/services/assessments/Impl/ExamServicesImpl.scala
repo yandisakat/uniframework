@@ -26,3 +26,5 @@ class ExamServicesImpl extends ExamRepository with ExamService{
   }
            
    def deleteExam(examId:String):Future[ResultSet] ={
+      database.ExamTable.deleteExam(examId)
+  }
