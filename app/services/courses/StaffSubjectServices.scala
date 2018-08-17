@@ -1,6 +1,6 @@
 package services.places
 import com.datastax.driver.core.ResultSet
-import domain.pdomain.courses.Place
+import domain.pdomain.courses.Course
 import services.courses.Impl.StaffSubjectImpl
 
 /*
