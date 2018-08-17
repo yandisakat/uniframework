@@ -18,5 +18,5 @@ def getEntities(id: String): Future[Seq[Entity]]
 def deleteStaffSubject(id: String): Future[ResultSet]
 }
 object StaffSubjectServices{
-def apply: EntityServices = new StaffSubjectServicesImpl
+def apply: StaffSubjectServices = new StaffSubjectServicesImpl
 }
