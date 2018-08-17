@@ -14,7 +14,7 @@ import scala.concurrent.Future
 trait StaffSubjectServices {
 
 def save(staffSubject: StaffSubject): Future[ResultSet]
-def getEntities(id: String): Future[Seq[Entity]]
+def getStaffSubject(id: String): Future[Seq[Entity]]
 def deleteStaffSubject(id: String): Future[ResultSet]
 }
 object StaffSubjectServices{
