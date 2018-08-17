@@ -12,8 +12,8 @@ import services.courses.Impl.FacultyImpl
 
 import scala.concurrent.Future
 
-trait FacultyServices {
-
+trait FacultyServices 
+{
   def save(fac: Faculty): Future[ResultSet]
 
   def getFaculties(facId: String): Future[Seq[Faculty]]
@@ -23,6 +23,7 @@ trait FacultyServices {
   def deleteFaculties(facId: String): Future[ResultSet]
 }
 
-object FacultyServices{
+object FacultyServices
+{
   def apply: FacultyServices = new FacultyServicesImpl
 }
