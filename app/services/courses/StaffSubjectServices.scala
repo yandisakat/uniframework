@@ -8,7 +8,7 @@ import services.courses.Impl.StaffSubjectImpl
 * 216074630
 */
 
-import scala.concurrent.Futur
+import scala.concurrent.Future
 
 
 trait StaffSubjectServices {
