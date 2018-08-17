@@ -1,4 +1,0 @@
-/**
- * creater Omega
- * reviewer Dorcas
- */
