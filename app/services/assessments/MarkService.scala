@@ -16,7 +16,7 @@ trait MarkServices
 {
   def save(mark: Mark): Future[ResultSet]
   
-  def getMarks(markId:String): Future[Seq[Mark]]
+  def getMarks(markId: String): Future[Seq[Mark]]
   
   def getMark(markId: String): Future[Mark]
   
