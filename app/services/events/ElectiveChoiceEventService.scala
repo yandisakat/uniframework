@@ -13,7 +13,7 @@ import scala.concurrent.Future
 
 trait ElectiveChoiceEventServices {
 
-  def save(role: ElectiveChoiceEvent): Future[ResultSet]
+  def save(electivechoiceevent: ElectiveChoiceEvent): Future[ResultSet]
 
   def getElectiveChoiceEvent(electiveId: String): Future[Seq[ElectiveChoiceEvent]]
 
