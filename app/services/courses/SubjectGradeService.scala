@@ -13,7 +13,7 @@ import scala.concurrent.Future
 
 trait SubjectGradeServices {
 
-  def save(role: SubjectGrade): Future[ResultSet]
+  def save(subjectgrade: SubjectGrade): Future[ResultSet]
 
   def getSubjectGrade(subjectId: String): Future[Seq[SubjectGrade]]
 
