@@ -1,5 +1,7 @@
 package repositories.people
-
+/*
+*By Omega Mbadu
+*/
 import com.outworkers.phantom.dsl._
 import conf.connections.DataConnection
 import repositories.people.tables._
