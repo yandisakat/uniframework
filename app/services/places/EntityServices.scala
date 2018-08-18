@@ -1,10 +1,8 @@
 package services.places
 
-
 /**
  * creater Reece
  * reviewer Natasha
- *
  */
 
 import com.datastax.driver.core.ResultSet
