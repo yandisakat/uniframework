@@ -1,11 +1,9 @@
 package services.courses.Impl
 
-
 /** 
  * created by Natasha
  * reviewer Omega
 */
-
 
 import com.datastax.driver.core.ResultSet
 import domain.courses.SubjectGrade
@@ -15,18 +13,18 @@ import services.courses.SubjectGradeServices
 import scala.concurrent.Future
 
 class SubjectGradeServicesImpl extends SubjectGradeRepository with SubjectGradeServices{
-  def save(role: SubjectGrade): Future[ResultSet] = {
-    database.subjectGradeTable.save(role)
+  def save(subjectgrade: SubjectGrade): Future[ResultSet] = {
+    database.subjectGradeTable.save(subjectgrade)
 
   }
 
-  def getSubjectGrade(subjectId: String): Future[Seq[UserRole]] = {
+  def getSubjectGrade(subjectId: String): Future[Seq[SubjectGrade]] = {
     database.subjectGradeTable.getSubjectGrade(subjectId)
 
   }
 
-  def getSubjectGrade(subjectId: String): Future[UserRole] = {
-    database.subjectGradeTable.getSubjectGrade(subjectId).map(role => role.head)
+  def getSubjectGrade(subjectId: String): Future[SubjectGrade] = {
+    database.subjectGradeTable.getSubjectGrade(subjectId).map(subjectgrade => subjectgrade.head)
   }
 
   def deleteSubjectGrade(subjectId:String):Future[ResultSet] ={
