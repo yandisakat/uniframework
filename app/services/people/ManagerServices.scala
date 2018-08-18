@@ -16,11 +16,11 @@ trait ManagerServices
 {
   def save(manager: Manager): Future[ResultSet]
   
-  def getManager(manId: String): Future[Seq[Manager]]
+  def getManager(managerId: String): Future[Seq[Manager]]
   
-  def getManager(manId: String): Future[Manager]
+  def getManager(managerId: String): Future[Manager]
   
-  def deleteManager(manId: String): Future[ResultSet]
+  def deleteManager(managerId: String): Future[ResultSet]
   
  }
  
