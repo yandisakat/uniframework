@@ -1,6 +1,6 @@
 /** 
  * created by Omega Mbadu
- * reviewer Dorcas Mbi
+ * reviewer Dorcas Mbi(review done)
 */
 
 import com.datastax.driver.core.ResultSet
