@@ -15,11 +15,11 @@ trait SubjectGradeServices {
 
   def save(role: SubjectGrade): Future[ResultSet]
 
-  def getUserRoles(subjectId: String): Future[Seq[SubjectGrade]]
+  def getSubjectGrade(subjectId: String): Future[Seq[SubjectGrade]]
 
-  def getUserRole(subjectId: String): Future[SubjectGrade]
+  def getSubjectGrade(subjectId: String): Future[SubjectGrade]
 
-  def deleteUserRoles(subjectId: String): Future[ResultSet]
+  def deleteSubjectGrade(subjectId: String): Future[ResultSet]
 }
 
 object SubjectGradeServices{
