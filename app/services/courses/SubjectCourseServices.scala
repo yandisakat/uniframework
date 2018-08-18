@@ -8,7 +8,7 @@ import scala.concurrent.Future
 
 /** 
  * creater Wailed
- * reviewer Omega
+ * reviewed Omega
  *
  *
 */
