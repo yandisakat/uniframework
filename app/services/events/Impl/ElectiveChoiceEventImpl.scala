@@ -13,8 +13,8 @@ import services.events.ElectiveChoiceEventServices
 import scala.concurrent.Future
 
 class ElectiveChoiceEventServicesImpl extends ElectiveChoiceEventRepository with ElectiveChoiceEventServices{
-  def save(role: ElectiveChoiceEvent): Future[ResultSet] = {
-    database.ElectiveChoiceEventTable.save(role)
+  def save(electivechoiceevent: ElectiveChoiceEvent): Future[ResultSet] = {
+    database.ElectiveChoiceEventTable.save(electivechoiceevent)
 
   }
 
@@ -24,7 +24,7 @@ class ElectiveChoiceEventServicesImpl extends ElectiveChoiceEventRepository with
   }
 
   def getElectiveChoiceEvent(electiveId: String): Future[ElectiveChoiceEvent] = {
-    database.ElectiveChoiceEventTable.getElectiveChoiceEvent(electiveId).map(role => role.head)
+    database.ElectiveChoiceEventTable.getElectiveChoiceEvent(electiveId).map(electivechoiceevent => electivechoiceevent.head)
   }
 
   def deleteElectiveChoiceEvent(electiveId:String):Future[ResultSet] ={
