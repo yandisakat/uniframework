@@ -2,7 +2,7 @@ package services.courses
 
 /** 
  * created by Natasha
- * reviewer Omega
+ * reviewed by Omega
 */
 
 import com.datastax.driver.core.ResultSet
