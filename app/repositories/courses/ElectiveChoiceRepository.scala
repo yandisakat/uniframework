@@ -6,6 +6,8 @@ import repositories.courses.tables._
 
 /*
  * By Omega Mbadu
+ * reviewed by Natasha 
+ * Moved to the correct folder under events - Please delete this one
  */
 
 class ElectivesDatabase(override val connector: KeySpaceDef) extends Database[ElectivesDatabase](connector)
