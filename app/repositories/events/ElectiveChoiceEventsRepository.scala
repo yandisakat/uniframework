@@ -9,14 +9,14 @@ import repositories.events.tables._
  * reviewed by Natasha
  */
 
-class ElectiveChoiceEventsDatabase(override val connector: KeySpaceDef) extends Database[ElectiveChoiceEventsDatabase](connector)
+class ElectiveChoiceEventDatabase(override val connector: KeySpaceDef) extends Database[ElectiveChoiceEventDatabase](connector)
 {
-   object electiveChoiceEventsTable extends ElectiveChoiceEventsTableImp with connector.Connector
+   object electiveChoiceEventTable extends ElectiveChoiceEventTableImp with connector.Connector
 }
 
-object ElectiveChoiceEventsDatabase extends ElectiveChoiceEventsDatabase(DataConnection.connector)
+object ElectiveChoiceEventDatabase extends ElectiveChoiceEventDatabase(DataConnection.connector)
 
 trait ElectiveChoiceEventsRepository
 {
-  def database = ElectiveChoiceEventsDatabase
+  def database = ElectiveChoiceEventDatabase
 }
