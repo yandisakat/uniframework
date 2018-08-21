@@ -17,7 +17,9 @@ abstract class MarkTable extends Table[MarkTable, Mark]
 {
     object studentId extends StringColumn with PartitionKey
     
-    object subjectId extends StringColumn with PrimaryKey with ClusteringOrder with Asceneding
+    object subjectId extends StringColumn with PrimaryKey with ClusteringOrder with Ascending
+ 
+    object markId extends StringColumn with PrimaryKey with ClusteringOrder with Ascending
     
     object subjectName extends StringColumn
     
@@ -40,6 +42,7 @@ abstract class MarkTableImpl extends MarkTable with RootConnector
       insert
         .value(_.studentId, mark.studentId)
         .value(_.subjectId, mark.subjectId)
+        .value(_.markId, mark.markId)
         .value(_.subjectName, mark.subjectName)
         .value(_.examiner, mark.examiner)
         .value(_.date,mark.date)
@@ -48,19 +51,21 @@ abstract class MarkTableImpl extends MarkTable with RootConnector
         .future()
   }
   
-  def getMark(studentId: String, subjectId: String):Future[Seq[Mark]] = 
+  def getMark(studentId: String, subjectId: String, markId: String):Future[Seq[Mark]] = 
   {
     select
       .where(_.studentId eqs studentId)
       .and(_.subjectId eqs subjectId)
+      .and(_.markId eqs markId)
       .fetchEnumerator() run Iteratee.collect()
   }
   
-  def deleteMark(studentId:String, subjectId:String):Future[ResultSet] = 
+  def deleteMark(studentId:String, subjectId:String, markId: String):Future[ResultSet] = 
   {
     delete
       .where(_.studentId eqs studentId)
       .and(_.subjectId eqs subjectId)
+      .and(_.markId eqs markId)
       .future()
   }
   

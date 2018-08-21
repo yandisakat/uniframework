@@ -1,6 +1,0 @@
-/**
- * creater Kessel
- * reviewer Omega
- *
- */
-

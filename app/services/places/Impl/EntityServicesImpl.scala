@@ -3,7 +3,6 @@ package services.places.Impl
 /**
  * creater Reece
  * reviewer Natasha
- *
  */
 
 import com.datastax.driver.core.ResultSet

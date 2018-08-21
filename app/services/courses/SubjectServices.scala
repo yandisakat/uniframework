@@ -2,7 +2,7 @@ package services.courses
 
 /** 
  * creater Reece
- * reviewer Omega
+ * reviewed by Omega
  *
  *
 */

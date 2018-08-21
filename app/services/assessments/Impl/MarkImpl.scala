@@ -1,5 +1,0 @@
-/**
- * creater Yandisa
- * reviewer Thomas
- *
- */

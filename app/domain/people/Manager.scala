@@ -1,5 +1,9 @@
 package domain.people
-
+/**
+  * created by Kessel
+  * reviewed by Omega Mbadu
+  *
+  */
 import java.time.LocalDateTime
 import play.api.libs.json.Jso
 
@@ -17,7 +21,7 @@ import play.api.libs.json.Jso
   *
   */
 
-case class Manager(managerID: String, firstname: String, lastname: String,dateofbirth: LocalDate, telNo: Int, emailAddr: String, addr: String, managerStartDate: LocalDateTime, managerEndDate: LocalDateTime)
+case class Manager(managerID: String, firstname: String, lastname: String, dateofbirth: LocalDate, telNo: Int, emailAddr: String, addr: String, managerStartDate: LocalDateTime, managerEndDate: LocalDateTime)
 
 object Manager {
 

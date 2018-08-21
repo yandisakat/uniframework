@@ -10,6 +10,10 @@ import domain.events.ElectiveChoiceEvent
 
 import scala.concurrent.Future
 
+/*
+ *created by Dorcas
+ *reviewed by Natasha
+ */
 
 abstract class ElectiveChoiceEventTable extends Table[ElectiveChoiceEventTable, ElectiveChoiceEvent] {
 
@@ -34,12 +38,18 @@ abstract class ElectiveChoiceEventTableImpl extends ElectiveChoiceEventTable wit
   }
 
   def getEvent(studId: String, subId:String): Future[Option[ElectiveChoiceEvent]] = {
-    select.where(_.studId eqs studId).and(_.subId eqs subId).one()
+    select
+    .where(_.studId eqs studId)
+    .and(_.subId eqs subId)
+    .fetchEnumerator() run Iteratee.collect()
   }
 
  
     def deleteEvent(studId: String, subId:String): Future[ResultSet] = {
-    delete.where(_.studId eqs studId).and(_.subId eqs subId).future()
+    delete
+      .where(_.studId eqs studId)
+      .and(_.subId eqs subId)
+      .future()
   }
 }
 
