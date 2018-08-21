@@ -1,12 +1,12 @@
 
+package services.courses.Impl
+
 
 /**
  * creater Omega
  * created by Kessel
  * reviewer Dorcas
  */
-
-package services.courses.Impl
 
 import com.datastax.driver.core.ResultSet
 import domain.courses.StudentSubject
