@@ -17,6 +17,7 @@ trait RoleServices {
   def deleteUserRoles(emailId: String): Future[ResultSet]
 }
 
+
 object RoleServices{
   def apply: RoleServices = new RoleServicesImpl
 }
