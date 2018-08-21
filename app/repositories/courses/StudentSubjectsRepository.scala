@@ -6,6 +6,7 @@ import repositories.courses.tables._
 
 /*
  * By Omega Mbadu
+ * Reviewed by Yandisa Katiya
  */
 
 class StudentSubjectsDatabase(override val connector: KeySpaceDef) extends Database[StudentSubjectsDatabase](connector)
