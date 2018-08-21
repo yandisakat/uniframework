@@ -1,8 +1,8 @@
 package services.courses
 
 /**
- * created by Omega Mbadu
- * reviewer Yandisa
+ * Created by Omega Mbadu
+ * Reviewed by Yandisa Katiya
  *
  */
 
