@@ -2,7 +2,7 @@ package services.assessments
 
 /**
  * Created by Yandisa Katiya
- * reviewer Thomas Miller
+ * Reviewed by Thomas Miller
  *
  */
 
