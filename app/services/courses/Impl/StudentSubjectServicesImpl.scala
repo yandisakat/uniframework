@@ -16,7 +16,7 @@ import services.courses.StudentSubjectService
 import scala.concurrent.Future
 
 class StudentSubjectServicesImpl extends StudentSubjectRepository with StudentSubjectService{
-  def save(studentsubject: StudentSubject: Future[ResultSet] = {
+  def save(studentsubject: StudentSubject): Future[ResultSet] = {
     database.StudentSubjectTable.save(studentsubject)
 
   }
