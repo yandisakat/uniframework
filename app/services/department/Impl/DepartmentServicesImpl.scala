@@ -2,8 +2,8 @@
 package services.courses.Impl
 
 /** 
- * creater Reece
- * reviewer Yandisa
+ * Created by Reece
+ * Reviewed by Yandisa Katiya
  *
  *
 */
