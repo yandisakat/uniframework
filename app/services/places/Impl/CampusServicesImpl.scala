@@ -15,7 +15,7 @@ import scala.concurrent.Future
 
 class CampusServicesImpl extends CampusRoleRepository with CampusServices{
   def save(campus: Campus): Future[ResultSet] = {
-    database.campusRoleTable.save(campus)
+    database.campusTable.save(campus)
 
   }
 
