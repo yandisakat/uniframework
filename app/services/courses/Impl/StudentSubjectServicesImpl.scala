@@ -24,7 +24,7 @@ class StudentSubjectServicesImpl extends StudentSubjectRepository with StudentSu
      database.StudentSubjectTable.getStudentSubjectDetails(orgId)
 
   }
-   def getStudentSubjectetails(orgId: String): Future[StudentSubject] = {
+   def getStudentSubjectDetails(orgId: String): Future[StudentSubject] = {
       database.StudentSubjectTable.getStudentSubjectDetails(orgId).map(studentsubject => studentsubject.head)
   }
            
