@@ -28,7 +28,7 @@ class DepartmentServicesImpl extends DepartmentRepository with DepartmentService
     database.departmentTable.getDepartments(depId).map(department => department.head)
   }
 
-  def deleteDepartments(depId:String):Future[ResultSet] ={
+  def deleteDepartments(depId: String):Future[ResultSet] ={
     database.departmentTable.deleteDepartments(depId)
   }
 }
