@@ -10,7 +10,7 @@ import repositories.courses.tables._
 
 class CourseDatabase(overide val connector: KeySpaceDef) extends Database [CourseDatabase](connector)
 {
-    object CourseTable extends CourseTalbleImp with connector.Connector
+    object CourseTable extends CourseTableImp with connector.Connector
 }
 
 object CourseDatabase extends CourseDatabase(DataConnection.connector)
