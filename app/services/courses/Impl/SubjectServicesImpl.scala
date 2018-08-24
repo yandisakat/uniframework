@@ -7,7 +7,6 @@ package services.courses.Impl
  *
 */
 
-
 import com.datastax.driver.core.ResultSet
 import domain.courses.Subject
 import repositories.courses.SubjectRepository
@@ -21,7 +20,7 @@ class SubjectServicesImpl extends SubjectRepository with SubjectServices{
 
   }
 
-  def getSubjects(subjectId: String): Future[Seq[Subject]] = {
+  def getSubjects(subjId: String): Future[Seq[Subject]] = {
     database.subjectTable.getSubjects(subjId)
 
   }
