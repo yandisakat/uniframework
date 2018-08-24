@@ -16,7 +16,7 @@ trait ManagerServices
 {
   def save(manager: Manager): Future[ResultSet]
   
-  def getManager(managerId: String): Future[Seq[Manager]]
+  def getManagers(managerId: String): Future[Seq[Manager]]
   
   def getManager(managerId: String): Future[Manager]
   
