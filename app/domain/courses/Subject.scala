@@ -13,5 +13,5 @@ case class Subject(subjId: String, subjName:String, subjDescr: String, subjCredi
 
 object Subject {
   implicit val subject = Json.format[Subject]
-  def identify:Subject = Subject ("","","",0.0)
+  def identity:Subject = Subject ("","","",0.0)
 }
