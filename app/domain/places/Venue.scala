@@ -14,5 +14,5 @@ case class Venue(venueId:String, venueName:String, capacity: Int, description: S
 object Venue
 {
   implicit val venueJson = Json.format[Venue]
-  def definity: Venue = Venue ("", "",0,"")
+  def identity: Venue = Venue ("", "",0,"")
 }
