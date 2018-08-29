@@ -1,6 +1,10 @@
 
 package repositories.courses.tables
 
+/*created for Wailed
+ * created by Kessel 
+ */
+
 import java.time.LocalDateTime
 
 import com.outworkers.phantom.dsl._
