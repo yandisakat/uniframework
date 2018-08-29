@@ -20,7 +20,7 @@ class SubjectCourseServicesImpl extends SubjectCourseRepository with SubjectCour
 
   }
 
-  def getUserRoles(subjectId: String): Future[Seq[SubjectCourse]] = {
+  def getSubjectCourses(subjectId: String): Future[Seq[SubjectCourse]] = {
     database.subjectCourseTable.getSubjectCourse(subjectId)
 
   }

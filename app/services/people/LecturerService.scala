@@ -8,7 +8,7 @@ package services.people
 
 import com.datastax.driver.core.ResultSet
 import domain.people.Lecturer
-import services.people.Impl.RoleServicesImpl
+import services.people.Impl.LecturerServicesImpl
 
 import scala.concurrent.Future
 
@@ -16,7 +16,7 @@ trait LecturerServices {
 
   def save(lecturer: Lecturer): Future[ResultSet]
 
-  def getLecture(lectId: String): Future[Seq[Lecturer]
+  def getLectures(lectId: String): Future[Seq[Lecturer]
 
   def getLecture(lectId: String): Future[Lecturer]
 
