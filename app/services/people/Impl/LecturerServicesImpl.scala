@@ -26,7 +26,7 @@ class LecturerServicesImpl extends LecturerRepository with LecturerServices
       database.lecturerTable.getLecturer(lectId)
   }
   
-  def getMark(lectId: String): Future[lecturer] = 
+  def getLecturer(lectId: String): Future[lecturer] = 
   {
       database.lecturerTable.getLecturer(lectId).map(lecturer => lecturer.head)
   }
